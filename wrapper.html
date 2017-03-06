@@ -35,7 +35,9 @@
     <style>
     {% if templateset.custom_fields.font_family %}
         html {
-            font-family: {{ templateset.custom_fields.font_family|safe }};
+            font-family: "Gotham A", "Gotham B";
+            font-style: normal;
+            font-weight: 400;
         }
     {% endif %}
     {% if templateset.custom_fields.font_size %}
