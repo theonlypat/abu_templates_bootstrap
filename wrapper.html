@@ -257,7 +257,7 @@
 <body class="ak-pagetype-{{ filename|split:'.'|nth:0 }} ak-lang-{{page.lang.iso_code|default:"unknown"}}{% if page.lang.is_rtl %} ak-rtl{% endif %} ak-no-js">
     <script type="text/javascript">actionkit.forms.initPage()</script>
 
-    <div class="ak-page-header" style="height:50px;">
+    <div class="container-fluid" style="height:50px;">
         <div class="ak-page-header-contents">
             <h1 style="font-size:24px;">Alliance for a Better Utah—<small>{{ page.title }}</small></h1>
             {% include "./language_picker.html" %}
@@ -265,12 +265,12 @@
         </div>
     </div>
 
-    <div class="ak-page-container container">
+    <div class="container">
 
         {% block content %}{% endblock %}
 
-        <div class="ak-page-footer row" style="text-align:center">
-            <div class="ak-page-footer-contents">
+        <div class="row" style="text-align:center">
+            <div class="col-md-12">
                 <a href="http://betterutah.org" target="_blank"><img src="https://s3.amazonaws.com/s3.betterutah.org/images/ABU_LOGO_B_HORZ.png" height="60px" style="" /></a><br>
                 <!-- <span><a href="//betterutah.org/privacy/">{{ 'Privacy'|ak_text:'privacy' }}</a></span> -->
                 <span><a href="mailto:info@betterutah.org">{{ 'Contact'|ak_text:'contact' }}</a></span>
