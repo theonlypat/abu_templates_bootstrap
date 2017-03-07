@@ -3,7 +3,9 @@ html {
 }
 
 .full-height {
-	min-height:100vh;
+	/*min-height:100vh;*/
+	height: 100vh;
+    overflow: scroll;
 }
 
 .hero {
@@ -27,4 +29,8 @@ html {
 	font-size: 36px;
 	/*white-space: nowrap;*/
 	color: #fff;
+}
+
+#letter-form input {
+
 }
