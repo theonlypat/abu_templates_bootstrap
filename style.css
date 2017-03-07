@@ -2,6 +2,11 @@ html {
 	
 }
 
+.row {
+	margin-top:10px;
+	margin-bottom:15px;
+}
+
 .full-height {
 	min-height:100vh;
 	/*height: 100vh;*/
@@ -34,4 +39,9 @@ html {
 
 #letter-form input {
 
+}
+
+
+footer {
+	background-color:#efefef;
 }
