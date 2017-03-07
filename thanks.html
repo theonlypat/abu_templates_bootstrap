@@ -40,16 +40,6 @@
         <div class="col-md-6 col-md-offset-1">
             <h2>
                 <img src="/media/modern/stance-supportive.svg" width="34" class="checkmark-icon" alt="&#10003;">
-                <p>Your message was sent to
-                {% for target in context.targets.targets %} 
-                    {{ target.us_district }}
-                    {{ target.seat }} 
-                    {{ target.full_name }} 
-                    {{ target.title }} 
-                    {{ target.party }} 
-                    {{ target.phone }} 
-                {% endfor %} 
-                </p>
                 {% if page.followup.send_taf and args.taf %}
                     {% filter ak_text:"tell_your_friends_banner" %}
                     You're almost done!
@@ -61,6 +51,12 @@
                 {% endif %}
             </h2>
             <div>
+                <p>Your message was sent to:<br>
+                {% for target in context.targets.targets %}
+                    {{ target.title }} {{ target.full_name }} ({{ target.party }}, {{ target.state }})<br>
+                    Call them: {{ target.phone }}
+                {% endfor %} 
+                </p>
                 {% include_tmpl form.thank_you_text %}
             </div>
             {% include "./progress_meter.html" %}
