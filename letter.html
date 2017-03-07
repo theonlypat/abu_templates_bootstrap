@@ -60,12 +60,10 @@
                                 <p>Recipients: {{ targets.title_full }}</p>
                                 <p>Editable message:</p>
                                 <textarea id="id_comment" name="action_comment" class="form-control" rows="20">{% include_tmpl form.letter_text escaped %}</textarea>
+                                <br>
                                 <p>
-                                {% if user.custom_fields.lettet_petition_signature %}
-                                    {{ user.custom_fields.lettet_petition_signature }}
-                                {% else %}
-                                    Sincerely,
-                                {% endif %}
+                                <label for="id_letter_petition_signature">Your Closing</label>
+                                <input type="text" class="form-control" id="id_letter_petition_signature" placeholder="Sincerely,">
                                 <br>
                                 "Your Name"</p>
                             </div>
