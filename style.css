@@ -7,7 +7,6 @@ html {
 }
 
 .hero {
-	/*position:relative;*/
 	height:100vh;
 	text-align:center;
 	background-image:
@@ -17,16 +16,19 @@ html {
 		);
 	background-size:cover;
 }
-
+.hero_text {
+	position:absolute;
+	top:40%;
+	left:50%;
+	left: 50%;
+  	transform: translate(-50%, -50%);
+    color: #fff;
+}
 
 .hero .featured-img {
-	/*height:100vh;*/
 }
 
 .hero h2 {
-	position:absolute;
-	top:40%;
-	max-width: 70%;
-    font-size: 36px;
-    color: #fff;
+	font-size: 36px;
+	white-space: nowrap;
 }
