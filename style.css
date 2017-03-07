@@ -7,41 +7,14 @@ html {
 	margin-bottom:15px;
 }
 
-.full-height {
-	min-height:100vh;
-	/*height: 100vh;*/
-    /*overflow: scroll;*/
-}
-
-.hero {
-	height:100vh;
-	text-align:center;
-	background-image:
-		linear-gradient(
-			rgba(0, 0, 0, 0.5),
-			rgba(0, 0, 0, 0.5)
-		);
-	background-size:cover;
-	/*position:fixed;*/
-}
-.hero_text {
-	position:absolute;
-	top:40%;
-	left:50%;
-	left: 50%;
-  	transform: translate(-50%, -50%);  
-}
-.hero_text h2 {
-	font-size: 36px;
-	/*white-space: nowrap;*/
-	color: #fff;
-}
-
-#letter-form input {
-
+button {
+	height:initial;
 }
 
 
 footer {
 	background-color:#efefef;
+	margin-top: 0;
+    margin-bottom: 0;
+    padding: 20px;
 }
