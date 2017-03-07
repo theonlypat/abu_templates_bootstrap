@@ -37,7 +37,7 @@
             {% case 'state' %} 
                 {% include "./state_select.html" %}
             {% else %}
-                {{ field.input_html }}
+                {{ field.input_html|add_class:"from-control" }}
         {% endswitch %}
     </div>
 {% endfor %}
