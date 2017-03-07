@@ -37,9 +37,19 @@
 {% else %}
 
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 col-md-offset-1">
             <h2>
                 <img src="/media/modern/stance-supportive.svg" width="34" class="checkmark-icon" alt="&#10003;">
+                <p>Your message was sent to
+                {% for target in context.targets.targets %} 
+                    {{ target.us_district }}
+                    {{ target.seat }} 
+                    {{ target.full_name }} 
+                    {{ target.title }} 
+                    {{ target.party }} 
+                    {{ target.phone }} 
+                {% endfor %} 
+                </p>
                 {% if page.followup.send_taf and args.taf %}
                     {% filter ak_text:"tell_your_friends_banner" %}
                     You're almost done!
@@ -56,7 +66,7 @@
             {% include "./progress_meter.html" %}
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div>
                 <a class="ak-button ak-share-button ak-facebook" href="/share/link?type=fb&amp;page_name={{page.name}}&amp;action_id={{action.id}}&amp;akid={{akid}}" target="_blank">Share this on Facebook</a>
             </div>
