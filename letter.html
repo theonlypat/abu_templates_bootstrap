@@ -17,6 +17,12 @@
                             {{ page.title }}
                         {% endif %}
                         </h2>
+
+                        {% autoescape off %}
+                        <div class="ak-text-expander">{% include_tmpl form.about_text %}</div>
+                        <a href="#" class="ak-read-more ak-mobile" data-lines="10">Read more</a>
+                        {% endautoescape %}
+
                     </div>
                     <div class="col-md-6">
                         {# will add custom field image later #}
@@ -36,11 +42,6 @@
                 <div class="row">
 
                     <div class="col-md-7">
-
-                        {% autoescape off %}
-                        <div class="ak-text-expander">{% include_tmpl form.about_text %}</div>
-                        <a href="#" class="ak-read-more ak-mobile" data-lines="10">Read more</a>
-                        {% endautoescape %}
 
                         <div class="panel panel-default">
                             <div class="panel-heading">
