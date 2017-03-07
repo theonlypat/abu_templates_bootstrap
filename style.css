@@ -3,9 +3,9 @@ html {
 }
 
 .full-height {
-	/*min-height:100vh;*/
-	height: 100vh;
-    overflow: scroll;
+	min-height:100vh;
+	/*height: 100vh;*/
+    /*overflow: scroll;*/
 }
 
 .hero {
@@ -17,6 +17,7 @@ html {
 			rgba(0, 0, 0, 0.5)
 		);
 	background-size:cover;
+	/*position:fixed;*/
 }
 .hero_text {
 	position:absolute;
