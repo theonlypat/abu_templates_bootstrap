@@ -37,7 +37,8 @@
             {% case 'state' %} 
                 {% include "./state_select.html" %}
             {% else %}
-                {{ field.input_html }}
+                {# {{ field.input_html }} #}
+                <input type="{{ field.input }}" name="{{ field.field_name }}" id="id_{{ field.field_name }}" class="form-control">
         {% endswitch %}
     </div>
 {% endfor %}
