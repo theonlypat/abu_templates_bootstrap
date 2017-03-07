@@ -57,7 +57,7 @@
                             </div>
 
                             <div class="panel-body">
-                                <p>Recipients: {{ targets.title_full }}</p>
+                                <p>Recipients:  {% for group in target_groups %} {{ group.name }} {{ group.type }} {% endfor %}</p>
                                 <p>Editable message:</p>
                                 <textarea id="id_comment" name="action_comment" class="form-control" rows="20">{% include_tmpl form.letter_text escaped %}</textarea>
                                 <br>
@@ -79,6 +79,7 @@
 
                         {% include "./progress_meter.html" %}
 
+                        <h5>Your Contact Information:</h5>
                         <p>Enter your contact information below to identify you to the recipient. Required fields are marked with an *</p>
 
                         <div id="letter-form" class="ak-styled-fields {{templateset.custom_fields.field_labels_class|default:"ak-labels-overlaid"}} {{templateset.custom_fields.field_errors_class|default:"ak-errs-below"}}">
