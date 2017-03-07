@@ -2,6 +2,10 @@ html {
 	
 }
 
+.full-height {
+	min-height:100vh;
+}
+
 .hero {
 	/*position:relative;*/
 	height:100vh;
@@ -11,7 +15,7 @@ html {
 			rgba(0, 0, 0, 0.5),
 			rgba(0, 0, 0, 0.5)
 		);
-	background-size:100%;
+	background-size:cover;
 }
 
 
@@ -22,4 +26,7 @@ html {
 .hero h2 {
 	position:absolute;
 	top:40%;
+	max-width: 70%;
+    font-size: 36px;
+    color: #fff;
 }
