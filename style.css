@@ -1,0 +1,17 @@
+html {
+	
+}
+
+.hero {
+	position:relative;
+	text-align:center;
+}
+
+.hero .featured-img {
+	
+}
+
+.hero h2 {
+	position:absolute;
+	top:50px;
+}
