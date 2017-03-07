@@ -57,6 +57,8 @@
                             </div>
 
                             <div class="panel-body">
+                                <p>Recipients: {{ context.targets.are }}</p>
+                                <p>Editable message:</p>
                                 <textarea id="id_comment" name="action_comment" class="form-control" rows="20">{% include_tmpl form.letter_text escaped %}</textarea>
                             </div>
 
