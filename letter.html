@@ -30,23 +30,28 @@
 
             <div class="col-md-6 full-height">
 
-                <div id="letter-story">
+                <div id="">
 
                     {% autoescape off %}
                     <div class="ak-text-expander">{% include_tmpl form.about_text %}</div>
                     <a href="#" class="ak-read-more ak-mobile" data-lines="10">Read more</a>
                     {% endautoescape %}
 
-                    {% if form.statement_leadin %}
-                    {% autoescape off %}
-                    <div class="ak-p-before-textarea ak-margin-top-3">
-                        {% include_tmpl form.statement_leadin %}
-                    </div>
-                    {% endautoescape %}
-                    {% endif %}
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            {% if form.statement_leadin %}
+                            {% autoescape off %}
+                            <div class="panel-title">
+                                {% include_tmpl form.statement_leadin %}
+                            </div>
+                            {% endautoescape %}
+                            {% endif %}
+                        </div>
 
-                    <div class="ak-margin-bottom-1 ak-styled-fields">
-                    <textarea id="id_comment" name="action_comment" class="form-control" rows="10">{% include_tmpl form.letter_text escaped %}</textarea>
+                        <div class="panel-body">
+                            <textarea id="id_comment" name="action_comment" class="form-control" rows="20">{% include_tmpl form.letter_text escaped %}</textarea>
+                        </div>
+
                     </div>
 
                 </div>
