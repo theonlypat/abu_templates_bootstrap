@@ -9,8 +9,8 @@
 
 {% if actionkit_user %}
     {% if recurring_update or recurring_cancel %}
-        <div class="ak-grid-row">
-            <div class="ak-grid-col ak-grid-col-12-of-12">
+        <div class="row">
+            <div class="col-md-12">
                 <p>
                     {% filter ak_text:"logged_in_as" %}You are logged in as{% endfilter %} {{ actionkit_user.name }}.
                     <a href="/logout">{% filter ak_text:"logout" %}Click to log out.{% endfilter %}</a>
@@ -21,8 +21,8 @@
 {% endif %}
 
 {% if page.SUPPRESS_SHARING %}
-    <div class="ak-grid-row">
-        <div class="ak-grid-col ak-grid-col-12-of-12">
+    <div class="row">
+        <div class="col-md-12">
             <h2>
                 <img src="/media/modern/stance-supportive.svg" width="34" class="ak-checkmark-icon" alt="&#10003;">
                 {% filter ak_text:"noshare_thanks_banner" %}
@@ -36,8 +36,8 @@
     </div>
 {% else %}
 
-    <div class="ak-grid-row">
-        <div class="ak-grid-col ak-grid-col-6-of-12">
+    <div class="row">
+        <div class="col-md-6">
             <h2>
                 <img src="/media/modern/stance-supportive.svg" width="34" class="checkmark-icon" alt="&#10003;">
                 {% if page.followup.send_taf and args.taf %}
@@ -56,7 +56,7 @@
             {% include "./progress_meter.html" %}
         </div>
 
-        <div class="ak-grid-col ak-grid-col-6-of-12 ak-margin-top-2">
+        <div class="col-md-6">
             <div>
                 <a class="ak-button ak-share-button ak-facebook" href="/share/link?type=fb&amp;page_name={{page.name}}&amp;action_id={{action.id}}&amp;akid={{akid}}" target="_blank">Share this on Facebook</a>
             </div>
