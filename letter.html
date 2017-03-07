@@ -7,9 +7,9 @@
 
         <div class="row">
 
-            <div class="col-md-10 col-md-offset-1" style="">
+            <div class="col-md-8 col-md-offset-2" style="">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <h2>
                         {% if page.custom_fields.headline %}
                             {{ page.custom_fields.headline }}
@@ -17,12 +17,14 @@
                             {{ page.title }}
                         {% endif %}
                         </h2>
-
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
                         {% autoescape off %}
                         <div class="ak-text-expander">{% include_tmpl form.about_text %}</div>
                         <a href="#" class="ak-read-more ak-mobile" data-lines="10">Read more</a>
                         {% endautoescape %}
-
                     </div>
                     <div class="col-md-6">
                         {# will add custom field image later #}
@@ -37,7 +39,7 @@
         </div>
         <div class="row">
 
-            <div class="col-md-10 col-md-offset-1">
+            <div class="col-md-8 col-md-offset-2">
 
                 <div class="row">
 
@@ -66,7 +68,7 @@
 
                         {% include "./progress_meter.html" %}
 
-                        <h3>Enter your contact information below. Required fields are marked with an *</h3>
+                        <p>Enter your contact information below. Required fields are marked with an *</p>
 
                         <div id="letter-form" class="ak-styled-fields {{templateset.custom_fields.field_labels_class|default:"ak-labels-overlaid"}} {{templateset.custom_fields.field_errors_class|default:"ak-errs-below"}}">
 
