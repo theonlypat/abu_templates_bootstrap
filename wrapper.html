@@ -263,7 +263,7 @@
     <nav class="navbar-default navbar">
         <div class="container-fluid">
             <div class="navbar-header">
-                <h1 class="navbar-text" style="font-size:24px;">{% filter ak_text:"org_name" %} 
+                <h1 class="navbar-text" style="font-size:24px;">{% filter ak_text:"org_name" %}{% client_name %}{% endfilter %} 
                 {% if page.custom_fields.sponsors_ally_allies %}
                 &amp; {{ page.custom_fields.sponsors_ally_allies }}
                 {% endif %}
