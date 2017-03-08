@@ -263,9 +263,9 @@
     <nav class="navbar-default navbar">
         <div class="container-fluid">
             <div class="navbar-header">
-                <h1 class="navbar-text" style="font-size:24px;">Alliance for a Better Utah 
+                <h1 class="navbar-text" style="font-size:24px;">{% filter ak_text:"org_name" %} 
                 {% if page.custom_fields.sponsors_ally_allies %}
-                {{ page.custom_fields.sponsors_ally_allies }}
+                &amp; {{ page.custom_fields.sponsors_ally_allies }}
                 {% endif %}
                 <small>{{ page.title }}</small>
                 </h1>

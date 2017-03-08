@@ -25,6 +25,11 @@
                         <div class="ak-text-expander">{% include_tmpl form.about_text %}</div>
                         <a href="#" class="ak-read-more ak-mobile" data-lines="10">Read more</a>
                         {% endautoescape %}
+                        <h5>Sponsored by:
+                        {% filter ak_text:"org_name" %}
+                        {% if page.custom_fields.sponsors_ally_allies %}
+                            &amp; {{ page.custom_fields.sponsors_ally_allies }}
+                        {% endif %}
                     </div>
                     <div class="col-md-6">
                         {# will add custom field image later #}
