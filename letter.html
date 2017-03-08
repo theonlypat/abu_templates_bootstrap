@@ -36,10 +36,10 @@
                     </div>
                     <div class="col-md-6">
                         {# will add custom field image later #}
-                        <img src="http://placeimg.com/1000/500/nature" class="img-responsive featured-img">
+                        <!-- <img src="http://placeimg.com/1000/500/nature" class="img-responsive featured-img"> -->
 
                         {% if page.custom_fields.featured_image %}
-                        <!-- <img class="ak-featured-img" src="{{page.custom_fields.featured_image}}"> -->
+                        <img class="img-responsive featured-img" src="{{page.custom_fields.featured_image}}">
                         {% endif %}
                     </div>
                 </div>
