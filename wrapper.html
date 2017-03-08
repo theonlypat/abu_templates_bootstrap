@@ -263,7 +263,12 @@
     <nav class="navbar-default navbar">
         <div class="container-fluid">
             <div class="navbar-header">
-                <h1 class="navbar-text" style="font-size:24px;">Alliance for a Better Utah <small>{{ page.title }}</small></h1>
+                <h1 class="navbar-text" style="font-size:24px;">Alliance for a Better Utah 
+                {% if page.customs_fields.sponsors_ally_allies %}
+                {{ page.customs_fields.sponsors_ally_allies }}
+                {% endif %}
+                <small>{{ page.title }}</small>
+                </h1>
                 {% include "./language_picker.html" %}
             </div>
         </div>
