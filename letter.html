@@ -26,7 +26,7 @@
                         <a href="#" class="ak-read-more ak-mobile" data-lines="10">Read more</a>
                         {% endautoescape %}
                         <h5>Sponsored by:
-                        {% filter ak_text:"org_name" %}
+                        {% filter ak_text:"org_name" %}{% client_name %}{% endfilter %}
                         {% if page.custom_fields.sponsors_ally_allies %}
                             &amp; {{ page.custom_fields.sponsors_ally_allies }}
                         {% endif %}
