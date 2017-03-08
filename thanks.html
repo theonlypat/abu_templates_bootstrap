@@ -65,7 +65,7 @@
                     <p>Use the share link and email link to share this form with your family, friends, and neighbors.<p>
                 {% endif %}
                 {% if page.custom_fields.sponsors_ally_allies %}
-                <h5>Alliance for a Better Utah &amp; {% if page.custom_fields.sponsors_website_link %}
+                <h5><a href="http://betterutah.org" target="_blank">Alliance for a Better Utah</a> &amp; {% if page.custom_fields.sponsors_website_link %}
                 <a href="{{ page.custom_fields.sponsors_website_link }}" target="_blank">{{ page.custom_fields.sponsors_ally_allies }}</a>{% else %}{{ page.custom_fields.sponsors_ally_allies }}{% endif %}</h5>
                 {% endif %}
             </div>
