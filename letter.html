@@ -50,8 +50,7 @@
                                 {% if form.statement_leadin %}
                                 {% autoescape off %}
                                 <div class="panel-title">
-                                    <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>
-                                    {% include_tmpl form.statement_leadin %}
+                                    <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>{% include_tmpl form.statement_leadin %}
                                 </div>
                                 {% endautoescape %}
                                 {% endif %}
