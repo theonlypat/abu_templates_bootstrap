@@ -166,19 +166,15 @@
 
                 {% endif %}
 
-                   <div class="row">
+                   <div class="">
                     {% for row in amounts|columns:3 %}
-                    <div class="col-md-4">
+                    <div class="row">
                         {% for amount in row %}
                         {% if amount == "other" %}
-                        <div class="form-group">
-                            <noscript><input type="radio" value="" class="ak-amount-radio-button" name="amount"></noscript>
-                            <label for="ak-other-amount-field" class="sr-only">Amount (in {{ page.currency_sym }})</label>
-                            <div class="input-group">
-                                <div class="input-group-addon">{{ page.currency_sym }}</div>
-                                <input type="text" class="form-control" id="ak-other-amount-field" name="amount_other" placeholder="Amount">
-                                <div class="input-group-addon">.00</div>
-                            </div>
+                        <div class="input-group">
+                            <label for="ak-other-amount-field" class="sr-only">Other amount (in {{ page.currency_sym }})</label>
+                            <span class="input-group-addon" id="">{{ page.currency_sym }}</span>
+                            <input type="text" class="form-control" id="ak-other-amount-field" name="amount_other" placeholder="Amount">
                         </div>
                         {% else %}
                         <div class="input-group">
