@@ -174,14 +174,14 @@
                         <div class="input-group">
                             <label for="ak-other-amount-field" class="sr-only">Other amount (in {{ page.currency_sym }})</label>
                             <span class="input-group-addon" id="">{{ page.currency_sym }}</span>
-                            <input type="text" class="form-control" id="ak-other-amount-field" name="amount_other" placeholder="Amount">
+                            <input type="text" class="form-control" id="other-amount-field" name="amount_other" placeholder="Amount">
                         </div>
                         {% else %}
                         <div class="input-group">
+                            <label for="id_amount_{{amount}}" class="sr-only">{{amount}}</label>
                             <span class="input-group-addon">
                                 <input type="radio" aria-label="Select {{amount}}" id="id_amount_{{amount}}" value="{{ amount }}" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>
                             </span>
-                            <label for="id_amount_{{amount}}" class="sr-only">{{amount}}</label>
                             <span class="input-group-addon" id="amount-addon">{{ page.currency_sym }}{{ amount|commify }}</span>
                         </div>
                         {% endif %}
