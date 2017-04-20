@@ -167,10 +167,10 @@
                 {% endif %}
 
                 <div class="row">
-                 <div class="col-md-12">
+                 <div class="col-md-10 col-md-offset-1">
                    <div class="row">
                     {% for row in amounts|columns:3 %}
-                    <div class="col-md-4">
+                    <div class="col-md-4" style="margin-bottom:10px">
                         {% for amount in row %}
                         {% if amount == "other" %}
                         <div class="input-group">
@@ -238,7 +238,7 @@
 
                     <div class="ak-labels-overlaid ak-errs-below test2">
                         <div>
-                            <label for="id_name">Name</label>
+                            <label for="id_name" placeholder="{{ user.name }}">Name</label>
                             <input id="id_name" type="text" name="name">
                         </div>
                         <div>
@@ -432,9 +432,13 @@
                             <input id="ak-card_code" type="text" name="card_code" size="4">
                         </div>
                     </div>
+
+                    <div class="">
+                        <p>This form uses 128-bit encryption to protect your credit card and personal information.</p>
+                    </div>
                 </div><!--ak-styled-fields-->
 
-                <button class="ak-donate-three-step-visible" id="ak-continue-button">Continue</button>
+                <button class="ak-donate-three-step-visible btn btn-primary" id="ak-continue-button">Continue</button>
 
                 {% if page.payment_processor_information.init_submit_disabled %}
 
