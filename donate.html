@@ -171,11 +171,14 @@
                     <ul class="ak-unstyled">
                         {% for amount in row %}
                         {% if amount == "other" %}
-                        <li id="ak-other-amount-container">
+                        <li id="form-group">
                             <noscript><input type="radio" value="" class="ak-amount-radio-button" name="amount"></noscript>
-                            <label for="ak-other-amount-field" class="btn btn-default">
-                                <span class="ak-currency-sym">{{ page.currency_sym }}</span> <input type="text" id="ak-other-amount-field" name="amount_other" size="3" >
-                            </label>
+                            <label for="ak-other-amount-field" class="sr-only">Amount (in {{ page.currency_sym }})</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">{{ page.currency_sym }}</div>
+                                <input type="text" class="form-control" id="ak-other-amount-field" name="amount_other" placeholder="Amount">
+                                <div class="input-group-addon">.00</div>
+                            </div>
                         </li>
                         {% else %}
                         <li>
