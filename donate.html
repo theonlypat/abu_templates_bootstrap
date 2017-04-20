@@ -23,7 +23,7 @@
         </div>
 
         <div class="col-md-5">
-            <div class="ak-field-box">
+            <div class="ak-field-box donation-steps-box">
 
             <!--Add .ak-donate-three-step for three-step-->
             <div class="ak-donate-menu ak-donate-three-step-visible">
@@ -237,8 +237,9 @@
                     <h4 class="{% if not has_shippable_products %}ak-donate-three-step-hidden{% endif %}">Billing Address</h4>
 
                     <div class="ak-labels-overlaid ak-errs-below test2">
-                        <div>
+                        <div class="input-group">
                             <label for="id_name">Name</label>
+                            <span class="input-group-addon"><span class="glyphicons glyphicons-user"></span></span>
                             <input id="id_name" type="text" name="name" placeholder="{{ user.name }}" value="{{ user.name }}">
                         </div>
                         <div>
