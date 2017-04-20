@@ -183,10 +183,10 @@
                         {% else %}
                         <div class="input-group">
                             <span class="input-group-addon">
-                                <input type="radio" aria-label="Select {{amount}}">
+                                <input type="radio" aria-label="Select {{amount}}" id="id_amount_{{amount}}" value="{{ amount }}" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>
                             </span>
                             <label for="id_amount_{{amount}}" class="sr-only">{{amount}}</label>
-                            <input type="text" id="id_amount_{{amount}}" value="{{ amount }}" class="form-control" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>{{ page.currency_sym }}{{ amount|commify }}
+                            <span class="input-group-addon" id="amount-addon">{{ page.currency_sym }}{{ amount|commify }}</span>
                         </div>
                         {% endif %}
                         {% endfor %}
