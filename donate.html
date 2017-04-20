@@ -237,36 +237,32 @@
                     <h4 class="{% if not has_shippable_products %}ak-donate-three-step-hidden{% endif %}">Billing Address</h4>
 
                     <div class="ak-labels-overlaid ak-errs-below test2">
-                        <div class="input-group">
+                        <div>
                             <label for="id_name">Name</label>
-                            <span class="input-group-addon"><span class="glyphicons glyphicons-user x05"></span>
-                            <input class="form-control" id="id_name" type="text" name="name" placeholder="{{ user.name }}" value="{{ user.name }}">
+                            <input class="donation-input" id="id_name" type="text" name="name" placeholder="{{ user.name }}" value="{{ user.name }}">
                         </div>
-                        <div class="input-group">
+                        <div>
                             <label class="required" for="id_email">Email</label>
-                            <span class="input-group-addon"><span class="glyphicons glyphicons-envelope x05"></span></span>
-                            <input class="form-control" id="id_email" type="text" name="email" placeholder="{{ user.email }}" value="{{ user.email }}">
+                            <input class="donation-input" id="id_email" type="text" name="email" placeholder="{{ user.email }}" value="{{ user.email }}">
                         </div>
                         {% if has_shippable_products %}
-                        <div class="input-group">
+                        <div>
                             <label for="id_address1">Billing address line 1</label>
-                            <span class="input-group-addon"><span class="glyphicons glyphicons-home x05"></span></span>
-                            <input class="form-control" id="id_address1" type="text" name="address1" placeholder="{{ user.address1 }}" value="{{ user.address1 }}">
+                            <input class="donation-input" id="id_address1" type="text" name="address1" placeholder="{{ user.address1 }}" value="{{ user.address1 }}">
                         </div>
-                        <div class="input-group">
+                        <div>
                             <label for="id_address2">Billing address line 2 (optional)</label>
-                            <input class="form-control" id="id_address2" type="text" name="address2" placeholder="{{ user.address2 }}" value="{{ user.address2 }}">
+                            <input class="donation-input" id="id_address2" type="text" name="address2" placeholder="{{ user.address2 }}" value="{{ user.address2 }}">
                         </div>
                         {% else %}
-                        <div class="input-group">
+                        <div>
                             <label for="id_address1">Billing address</label>
-                            <span class="input-group-addon"><span class="glyphicons glyphicons-home x05"></span></span>
-                            <input class="form-control" id="id_address1" type="text" name="address1" placeholder="{{ user.address1 }}" value="{{ user.address1 }}">
+                            <input class="donation-input" id="id_address1" type="text" name="address1" placeholder="{{ user.address1 }}" value="{{ user.address1 }}">
                         </div>
                         {% endif %}
-                        <div class="input-group">
+                        <div>
                             <label for="id_city">City</label>
-                            <input class="form-control" id="id_city" type="text" name="city" placeholder="{{ user.city }}" value="{{ user.city }}">
+                            <input class="donation-input" id="id_city" type="text" name="city" placeholder="{{ user.city }}" value="{{ user.city }}">
                         </div>
                         <div class="ak-errs-below">
                             <div class="ak-us-billing-fields">
@@ -274,10 +270,10 @@
                                 <label for="id_state">State</label>
                                 {% include "./state_select.html" %}
                             </div>
-                            <div class="ak-us-billing-fields input-group">
+                            <div class="ak-us-billing-fields">
                                 <input type="hidden" name="required" value="zip">
                                 <label for="id_zip">Zip</label>
-                                <input class="form-control" id="id_zip" type="text" name="zip" maxlength="5" size="5" placeholder="{{ user.zip }}" value="{{ user.zip }}">
+                                <input class="donation-input" id="id_zip" type="text" name="zip" maxlength="5" size="5" placeholder="{{ user.zip }}" value="{{ user.zip }}">
                             </div>
                         </div>
                         {% if page.allow_international %}

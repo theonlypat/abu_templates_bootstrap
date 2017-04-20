@@ -18,6 +18,16 @@ button {
 
 /* FORM STYLES */
 
+.donation-input {
+	border-top:0;
+	border-left:0;
+	border-right:0;
+	border-bottom: 2px solid lightblue;
+}
+
+.donation-steps-box .input-group-addon {
+	padding:3px 12px;
+}
 .donation-amount-input-group-addon {
 	width:0%;
 }
