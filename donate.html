@@ -173,13 +173,13 @@
                         {% if amount == "other" %}
                         <li id="ak-other-amount-container">
                             <noscript><input type="radio" value="" class="ak-amount-radio-button" name="amount"></noscript>
-                            <label for="ak-other-amount-field" class="ak-btn">
+                            <label for="ak-other-amount-field" class="btn btn-default">
                                 <span class="ak-currency-sym">{{ page.currency_sym }}</span> <input type="text" id="ak-other-amount-field" name="amount_other" size="3" >
                             </label>
                         </li>
                         {% else %}
                         <li>
-                            <label for="id_amount_{{amount}}" class="ak-btn">
+                            <label for="id_amount_{{amount}}" class="btn btn-default">
                                 <span class="ak-currency-sym"></span><input type="radio" id="id_amount_{{amount}}" value="{{ amount }}" class="ak-amount-radio-button" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>{{ page.currency_sym }}{{ amount|commify }}
                             </label>
                         </li>
