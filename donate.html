@@ -6,15 +6,15 @@
     <input type="hidden" name="page" value="{{ page.name }}">
     <input type="hidden" name="orig_akid" value="{{ akid }}">
 
-    <div class="ak-grid-row">
-        <div class="ak-grid-col ak-grid-col-12-of-12">
+    <div class="row">
+        <div class="col-md-12">
             <h2>{{ page.title }}</h2>
         </div>
     </div>
 
-    <div class="ak-grid-row">
+    <div class="row">
 
-        <div class="ak-grid-col ak-grid-col-4-of-12">
+        <div class="col-md-4">
            {% if page.custom_fields.featured_image %}
             <img class="ak-featured-img" src="{{page.custom_fields.featured_image}}">
             {% endif %}
@@ -22,7 +22,7 @@
             {% include_tmpl form.ask_text %}
         </div>
 
-        <div class="ak-grid-col ak-grid-col-8-of-12">
+        <div class="col-md-8">
             <div class="ak-field-box">
 
             <!--Add .ak-donate-three-step for three-step-->
