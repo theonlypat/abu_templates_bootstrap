@@ -1,5 +1,5 @@
 <select name="{{ input_name_prefix }}state" id="id_{{ input_name_prefix }}state" class="form-control" {% if onchange %}onchange="{{ onchange }}" onblur="{{ onchange }}"{% endif %}>
-    {% if {{ user.state }} != "" %}
+    {% if user.state != "" %}
     <option value="{{ user.state }}" selected>{{ user.state }}</option>
     {% endif %}
     <option value="">State</option>
