@@ -240,11 +240,12 @@
                         <div class="input-group">
                             <label for="id_name">Name</label>
                             <span class="input-group-addon"><span class="glyphicons glyphicons-user"></span></span>
-                            <input id="id_name" type="text" name="name" placeholder="{{ user.name }}" value="{{ user.name }}">
+                            <input class="form-control" id="id_name" type="text" name="name" placeholder="{{ user.name }}" value="{{ user.name }}">
                         </div>
                         <div>
                             <label class="required" for="id_email">Email</label>
-                            <input id="id_email" type="text" name="email" placeholder="{{ user.email }}" value="{{ user.email }}">
+                            <span class="input-group-addon"><span class="glyphicons glyphicons-email"></span></span>
+                            <input class="form-control" id="id_email" type="text" name="email" placeholder="{{ user.email }}" value="{{ user.email }}">
                         </div>
                         {% if has_shippable_products %}
                         <div>
