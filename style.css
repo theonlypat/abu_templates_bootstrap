@@ -11,6 +11,12 @@ button {
 	height:initial;
 }
 
+/* FORM STYLES */
+
+.donation-amount-input-group-addon {
+	width:0%;
+}
+
 
 footer {
 	background-color:#efefef;
