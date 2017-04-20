@@ -239,7 +239,7 @@
                     <div class="ak-labels-overlaid ak-errs-below test2">
                         <div class="input-group">
                             <label for="id_name">Name</label>
-                            <span class="input-group-addon glyphicons glyphicons-user x05"></span>
+                            <span class="input-group-addon"><span class="glyphicons glyphicons-user x05"></span>
                             <input class="form-control" id="id_name" type="text" name="name" placeholder="{{ user.name }}" value="{{ user.name }}">
                         </div>
                         <div class="input-group">
@@ -251,23 +251,22 @@
                         <div class="input-group">
                             <label for="id_address1">Billing address line 1</label>
                             <span class="input-group-addon"><span class="glyphicons glyphicons-home x05"></span></span>
-                            <input id="id_address1" type="text" name="address1" placeholder="{{ user.address1 }}" value="{{ user.address1 }}">
+                            <input class="form-control" id="id_address1" type="text" name="address1" placeholder="{{ user.address1 }}" value="{{ user.address1 }}">
                         </div>
                         <div class="input-group">
                             <label for="id_address2">Billing address line 2 (optional)</label>
-                            <span class="input-group-addon"><span class="glyphicons glyphicons-home x05"></span></span>
-                            <input id="id_address2" type="text" name="address2" placeholder="{{ user.address2 }}" value="{{ user.address2 }}">
+                            <input class="form-control" id="id_address2" type="text" name="address2" placeholder="{{ user.address2 }}" value="{{ user.address2 }}">
                         </div>
                         {% else %}
                         <div class="input-group">
                             <label for="id_address1">Billing address</label>
                             <span class="input-group-addon"><span class="glyphicons glyphicons-home x05"></span></span>
-                            <input id="id_address1" type="text" name="address1" placeholder="{{ user.address1 }}" value="{{ user.address1 }}">
+                            <input class="form-control" id="id_address1" type="text" name="address1" placeholder="{{ user.address1 }}" value="{{ user.address1 }}">
                         </div>
                         {% endif %}
                         <div class="input-group">
                             <label for="id_city">City</label>
-                            <input id="id_city" type="text" name="city" placeholder="{{ user.city }}" value="{{ user.city }}">
+                            <input class="form-control" id="id_city" type="text" name="city" placeholder="{{ user.city }}" value="{{ user.city }}">
                         </div>
                         <div class="ak-errs-below">
                             <div class="ak-us-billing-fields">
@@ -278,7 +277,7 @@
                             <div class="ak-us-billing-fields input-group">
                                 <input type="hidden" name="required" value="zip">
                                 <label for="id_zip">Zip</label>
-                                <input id="id_zip" type="text" name="zip" maxlength="5" size="5" placeholder="{{ user.zip }}" value="{{ user.zip }}">
+                                <input class="form-control" id="id_zip" type="text" name="zip" maxlength="5" size="5" placeholder="{{ user.zip }}" value="{{ user.zip }}">
                             </div>
                         </div>
                         {% if page.allow_international %}
