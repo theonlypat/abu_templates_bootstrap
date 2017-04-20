@@ -166,12 +166,12 @@
 
                 {% endif %}
 
-                   <div class="ak-amount-wrapper">
+                   <div class="row">
                     {% for row in amounts|columns:3 %}
-                    <ul class="ak-unstyled">
+                    <div class="col-md-4">
                         {% for amount in row %}
                         {% if amount == "other" %}
-                        <li id="form-group">
+                        <div class="form-group">
                             <noscript><input type="radio" value="" class="ak-amount-radio-button" name="amount"></noscript>
                             <label for="ak-other-amount-field" class="sr-only">Amount (in {{ page.currency_sym }})</label>
                             <div class="input-group">
@@ -179,13 +179,15 @@
                                 <input type="text" class="form-control" id="ak-other-amount-field" name="amount_other" placeholder="Amount">
                                 <div class="input-group-addon">.00</div>
                             </div>
-                        </li>
+                        </div>
                         {% else %}
-                        <li>
-                            <label for="id_amount_{{amount}}" class="btn btn-default">
-                                <span class="ak-currency-sym"></span><input type="radio" id="id_amount_{{amount}}" value="{{ amount }}" class="ak-amount-radio-button" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>{{ page.currency_sym }}{{ amount|commify }}
-                            </label>
-                        </li>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <input type="radio" aria-label="Select {{amount}}">
+                            </span>
+                            <label for="id_amount_{{amount}}" class="sr-only">{{amount}}</label>
+                            <input type="text" id="id_amount_{{amount}}" value="{{ amount }}" class="form-control" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>{{ page.currency_sym }}{{ amount|commify }}
+                        </div>
                         {% endif %}
                         {% endfor %}
                     </ul>
