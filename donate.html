@@ -238,12 +238,12 @@
 
                     <div class="ak-labels-overlaid ak-errs-below test2">
                         <div>
-                            <label for="id_name" placeholder="{{ user.name }}">Name</label>
-                            <input id="id_name" type="text" name="name">
+                            <label for="id_name">Name</label>
+                            <input id="id_name" type="text" name="name" placeholder="{{ user.name }}" value="{{ user.name }}">
                         </div>
                         <div>
                             <label class="required" for="id_email">Email</label>
-                            <input id="id_email" type="text" name="email">
+                            <input id="id_email" type="text" name="email" placeholder="{{ user.email }}">
                         </div>
                         {% if has_shippable_products %}
                         <div>
