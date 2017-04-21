@@ -262,10 +262,10 @@
                         {% endif %}
                         <div class="row">
                             <div class="col-sm-6">
-                            <div>
+                            
                                 <label for="id_city">City</label>
                                 <input class="donation-input" id="id_city" type="text" name="city" placeholder="{{ user.city }}" value="{{ user.city }}">
-                            </div>
+                            
                             </div>
                             <div class="col-sm-6">
                             <div class="ak-errs-below">
@@ -288,6 +288,8 @@
                             </div>
                             </div>
                             <div class="col-sm-6">
+                                <label for="id_phone">Phone</label>
+                                <input class="donation-input" id="id_phone" type="text" name="phone" placeholder="{{ user.phone }}" value="{{ user.phone }}">
                             </div>
                         </div>
                         {% if page.allow_international %}
