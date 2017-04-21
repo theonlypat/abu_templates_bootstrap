@@ -23,6 +23,11 @@ button {
 	border-left:0;
 	border-right:0;
 	border-bottom: 2px solid lightblue;
+	width:100%;
+	background-color:#fff;
+	padding:.5rem;
+	margin-top:.5rem;
+	margin-bottom:.5rem;
 }
 
 .donation-steps-box .input-group-addon {

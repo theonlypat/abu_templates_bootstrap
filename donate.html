@@ -260,20 +260,34 @@
                             <input class="donation-input" id="id_address1" type="text" name="address1" placeholder="{{ user.address1 }}" value="{{ user.address1 }}">
                         </div>
                         {% endif %}
-                        <div>
-                            <label for="id_city">City</label>
-                            <input class="donation-input" id="id_city" type="text" name="city" placeholder="{{ user.city }}" value="{{ user.city }}">
-                        </div>
-                        <div class="ak-errs-below">
-                            <div class="ak-us-billing-fields">
-                                <input type="hidden" name="required" value="state">
-                                <label for="id_state">State</label>
-                                {% include "./state_select.html" %}
+                        <div class="row">
+                            <div class="col-sm-6">
+                            <div>
+                                <label for="id_city">City</label>
+                                <input class="donation-input" id="id_city" type="text" name="city" placeholder="{{ user.city }}" value="{{ user.city }}">
                             </div>
-                            <div class="ak-us-billing-fields">
-                                <input type="hidden" name="required" value="zip">
-                                <label for="id_zip">Zip</label>
-                                <input class="donation-input" id="id_zip" type="text" name="zip" maxlength="5" size="5" placeholder="{{ user.zip }}" value="{{ user.zip }}">
+                            </div>
+                            <div class="col-sm-6">
+                            <div class="ak-errs-below">
+                                <div class="ak-us-billing-fields">
+                                    <input type="hidden" name="required" value="state">
+                                    <label for="id_state">State</label>
+                                    {% include "./state_select.html" %}
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                            <div class="ak-errs-below">
+                                <div class="ak-us-billing-fields">
+                                    <input type="hidden" name="required" value="zip">
+                                    <label for="id_zip">Zip</label>
+                                    <input class="donation-input" id="id_zip" type="text" name="zip" maxlength="5" size="5" placeholder="{{ user.zip }}" value="{{ user.zip }}">
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-sm-6">
                             </div>
                         </div>
                         {% if page.allow_international %}
