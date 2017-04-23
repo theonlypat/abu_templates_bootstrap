@@ -84,8 +84,10 @@ button {
 .control {
 	font-size: 18px;
 	position: relative;
-	display: block;
+	display: inline-block;
 	margin-bottom: 15px;
+	margin-left: 10px;
+	margin-right: 10px;
 	padding-left: 30px;
 	cursor: pointer;
 }
@@ -102,8 +104,46 @@ button {
 	height: 20px;
 	background: #e6e6e6;
 }
+/* Check mark */
+.control__indicator:after {
+	position: absolute;
+	display: none;
+	content: '';
+}
 .control--radio .control__indicator {
 	border-radius: 50%;
+}
+/* Hover and focus states */
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+	background: #ccc;
+}
+/* Checked state */
+.control input:checked ~ .control__indicator {
+	background: #00aeef;
+}
+/* Hover state whilst checked */
+.control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator {
+	background: #0089bc;
+}
+/* Show check mark */
+.control input:checked ~ .control__indicator:after {
+	display: block;
+}
+/* Radio button inner circle */
+.control--radio .control__indicator::after {
+	top: 7px;
+	left: 7px;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: #fff;
+	content:'';
+}
+/* Disabled circle colour */
+.control--radio input:disabled ~ .control__indicator::after {
+	background: #7b7b7b;
 }
 .donation-steps-box .btn-primary {
 	display: block;
