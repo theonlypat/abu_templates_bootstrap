@@ -209,15 +209,15 @@
 
                 {% if not has_products %}
                     {% if allow_monthly %}
-                        <div id="ak-recurring-type" class="ak-donate-area-step-1">
-                            <span>
+                        <div id="ak-recurring-type" class="ak-donate-area-step-1 control-group">
+                            <label for="id_donation_type_single">One-Time
                                 <input type="radio" name="donation_type" id="id_donation_type_single" value="single" checked>
-                                <label for="id_donation_type_single"> One-Time</label>
-                            </span>
-                            <span>
+                                <div class="control__indicator"></div>
+                            </label>
+                            <label for="id_donation_type_recurring"><span class="glyphicons glyphicons-certificate"></span>Sustaining Member (Monthly)
                                 <input type="radio" name="donation_type" id="id_donation_type_recurring" value="recurring">
-                                <label for="id_donation_type_recurring"> <span class="glyphicons glyphicons-certificate"></span>Sustaining Member (Monthly)</label>
-                            </span>
+                                <div class="control__indicator"></div>
+                            </label>
                         </div>
                     {% else %}
                         <div id="ak-recurring-type"></div>
