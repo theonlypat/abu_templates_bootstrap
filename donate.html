@@ -181,7 +181,7 @@
                         {% else %}
                         <div class="donation_amount">
                             <input type="radio" aria-label="Select {{amount}}" id="id_amount_{{amount}}" value="{{ amount }}" aria-label="{amount}}" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>
-                            <label class="sr-only">{{ page.currency_sym }}{{ amount|commify }}</label>
+                            <label class="">{{ page.currency_sym }}{{ amount|commify }}</label>
                         </div>
                         {% endif %}
                         {% endfor %}
