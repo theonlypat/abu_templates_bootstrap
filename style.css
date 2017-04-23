@@ -46,6 +46,21 @@ button {
     width: 50%;
     margin: 0 auto;
 }
+#foo:checked::before,
+.donation_amount {
+    position:absolute;
+    clip: rect(0,0,0,0);
+    clip: rect(0 0 0 0);
+}
+
+#foo:checked,
+.donation_amount + label::before {
+    content: url('checkbox.png');
+}
+
+.donation_amount:checked + label::before {
+    content: url('checkbox-checked.png');
+}
 
 
 footer {

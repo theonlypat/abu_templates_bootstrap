@@ -179,7 +179,7 @@
                             <input type="text" class="form-control" id="other-amount-field" name="amount_other" placeholder="Amount" aria-label="Other amount (in {{ page.currency_sym }})">
                         </div>
                         {% else %}
-                        <div class="radio">
+                        <div class="">
                             <label>
                                 <input type="radio" aria-label="Select {{amount}}" class="donation_amount" id="id_amount_{{amount}}" value="{{ amount }}" aria-label="{amount}}" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>
                             {{ page.currency_sym }}{{ amount|commify }}</label>
