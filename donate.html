@@ -179,10 +179,9 @@
                             <input type="text" class="form-control" id="other-amount-field" name="amount_other" placeholder="Amount" aria-label="Other amount (in {{ page.currency_sym }})">
                         </div>
                         {% else %}
-                        <div class="">
-                            <label>
-                                <input type="radio" aria-label="Select {{amount}}" class="donation_amount" id="id_amount_{{amount}}" value="{{ amount }}" aria-label="{amount}}" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>
-                            {{ page.currency_sym }}{{ amount|commify }}</label>
+                        <div class="donation_amount">
+                            <input type="radio" aria-label="Select {{amount}}" id="id_amount_{{amount}}" value="{{ amount }}" aria-label="{amount}}" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>
+                            <label class="sr-only">{{ page.currency_sym }}{{ amount|commify }}</label>
                         </div>
                         {% endif %}
                         {% endfor %}
@@ -574,10 +573,28 @@
                                 .on('click', update_total);
     });
 
+    // /* Amount buttons */
+    // function highlight_selected_amount_button() {
+    //     $('label.ak-radio-checked').removeClass('ak-radio-checked');
+    //     $(this).closest('label').addClass('ak-radio-checked');
+    // }
+    // $(function() {
+    //     $('input[name="amount"]').on(
+    //         'click', highlight_selected_amount_button);
+    //     $('input[name="amount_other"]').on(
+    //         'click change', highlight_selected_amount_button);
+
+    //     // Make sure label is highlighted if an amount is pre-selected
+    //     highlight_selected_amount_button.call(
+    //         $('input[name="amount"]:checked').get(0) //||
+    //         //$('input[name="amount_other"]').get(0)
+    //     );
+    // });
+
     /* Amount buttons */
     function highlight_selected_amount_button() {
-        $('label.ak-radio-checked').removeClass('ak-radio-checked');
-        $(this).closest('label').addClass('ak-radio-checked');
+        $('div.ak-radio-checked').removeClass('ak-radio-checked');
+        $('.donation_amount').addClass('ak-radio-checked');
     }
     $(function() {
         $('input[name="amount"]').on(

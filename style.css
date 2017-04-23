@@ -61,6 +61,15 @@ button {
 .donation_amount:checked + label::before {
     content: url('checkbox-checked.png');
 }
+.donation_amount {
+	background-color:lightblue;
+	width:100px;
+	height:50px;
+	text-align: center;
+	border:2px solid #eee;
+	padding-top:1rem;
+	padding-bottom:2.5rem;
+}
 
 
 footer {
