@@ -594,7 +594,7 @@
     /* Amount buttons */
     function highlight_selected_amount_button() {
         $('div.ak-radio-checked').removeClass('ak-radio-checked');
-        $(this).addClass('ak-radio-checked');
+        $(this).closest('.donation_amount').addClass('ak-radio-checked');
     }
     $(function() {
         $('input[name="amount"]').on(
