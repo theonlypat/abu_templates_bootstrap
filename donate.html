@@ -174,7 +174,7 @@
                     <div class="col-md-4" style="margin-bottom:10px">
                         {% for amount in row %}
                         {% if amount == "other" %}
-                        <div class="input-group">
+                        <div class="input-group other_donation_amount">
                             <span class="input-group-addon donation-amount-input-group-addon" id="">{{ page.currency_sym }}</span>
                             <input type="text" class="form-control" id="other-amount-field" name="amount_other" placeholder="Amount" aria-label="Other amount (in {{ page.currency_sym }})">
                         </div>
