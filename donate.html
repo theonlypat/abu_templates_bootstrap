@@ -461,7 +461,7 @@
                     For pages that use Braintree, the submit button will be enabled by javascript.
                     {% endcomment %}
 
-                    <button disabled="true" type="submit" class="ak-submit-button ak-donate-area-step-3">Donate <span class="ak-currency-sym">{{ page.currency_sym }}</span><span class="ak-donation-total-amount"></span></button>
+                    <button disabled="true" type="submit" class="btn btn-danger ak-donate-area-step-3">Donate <span class="ak-currency-sym">{{ page.currency_sym }}</span><span class="ak-donation-total-amount"></span></button>
                     <noscript>
                         <p>
                             <b>JavaScript is required</b> so this page
@@ -471,7 +471,7 @@
 
                 {% else %}
 
-                    <button type="submit" class="ak-submit-button ak-donate-area-step-3">Donate <span class="ak-currency-sym">{{ page.currency_sym }}</span><span class="ak-donation-total-amount"></span></button>
+                    <button type="submit" class="btn btn-primary ak-donate-area-step-3">Donate <span class="ak-currency-sym">{{ page.currency_sym }}</span><span class="ak-donation-total-amount"></span></button>
 
                 {% endif %}
 
