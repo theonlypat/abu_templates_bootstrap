@@ -180,9 +180,9 @@
                         </div>
                         {% else %}
                         <div class="input-group">
-                            <span class="input-group-addon donation-amount-input-group-addon">
-                                <input type="radio" aria-label="Select {{amount}}" id="id_amount_{{amount}}" value="{{ amount }}" aria-label="{amount}}" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>
-                            </span>
+                            <!-- <span class="input-group-addon donation-amount-input-group-addon"> -->
+                                <input type="radio" aria-label="Select {{amount}}" class="donation_amount" id="id_amount_{{amount}}" value="{{ amount }}" aria-label="{amount}}" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>
+                            <!-- </span> -->
                             <span class="input-group-addon donation-amount-input-group-addon" id="amount-addon">{{ page.currency_sym }}{{ amount|commify }}</span>
                         </div>
                         {% endif %}
