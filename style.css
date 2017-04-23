@@ -47,20 +47,20 @@ button {
     margin: 0 auto;
 }
 #foo:checked::before,
-.donation_amount {
+.donation_amount input[type="radio"] {
     position:absolute;
     clip: rect(0,0,0,0);
     clip: rect(0 0 0 0);
 }
 
-#foo:checked,
+/*#foo:checked,
 .donation_amount + label::before {
     content: url('checkbox.png');
 }
 
 .donation_amount:checked + label::before {
     content: url('checkbox-checked.png');
-}
+}*/
 .donation_amount {
 	background-color:lightblue;
 	width:100px;
@@ -69,6 +69,10 @@ button {
 	border:2px solid #eee;
 	padding-top:1rem;
 	padding-bottom:2.5rem;
+	cursor:pointer;
+}
+.donation_amount .ak-radio-checked {
+	background-color:darkblue;
 }
 
 
