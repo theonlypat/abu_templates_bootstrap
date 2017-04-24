@@ -1299,6 +1299,8 @@ $(function() {
 
     actionkit.donations.initClient('{{ pp.client_token }}', options);
 
+    actionkit.donations.addClass('number', 'inputAKTest');
+
     // read by 3-step validation
     actionkit.donations.skip_cc_validation = true;
     actionkit.donations.vzero = true;
