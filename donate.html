@@ -1196,7 +1196,7 @@
     background-color: white;
     border-bottom: 2px solid #00aeef;
 }
-.hosted-field.hosted-field-focus {
+.hosted-field.braintree-hosted-fields-focus {
     outline: none;
     border-bottom:4px solid orange;
 }
@@ -1236,14 +1236,13 @@ $(function() {
                     'font-size': '{{ templateset.custom_fields.font_size|default:"16.5px" }}',
                     'color': '#4b4b46'
                 },
-                'input:focus': {
+                ':focus': {
                     'border-bottom': 'solid 2px orange',
                     'outline': 'none'
                 },
                 'input.invalid': {
                     'color': '{{templateset.custom_fields.color_error|default:"#d00" }}',
-                    'background-color': '#FFC8C8',
-                    'border-bottom': 'orange'
+                    'background-color': '#FFC8C8'
                 },
                 'input.valid': {
                     'color': 'green'
@@ -1299,8 +1298,6 @@ $(function() {
     };
 
     actionkit.donations.initClient('{{ pp.client_token }}', options);
-
-    actionkit.donations.addClass('number', 'inputAKTest');
 
     // read by 3-step validation
     actionkit.donations.skip_cc_validation = true;
