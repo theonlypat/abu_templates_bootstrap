@@ -1188,6 +1188,13 @@
 
 {% with page.payment_processor_information as pp %}
 {% if pp.use_vzero %}
+
+{% comment %}
+Braintree offers three classes (that I know of so far) for hosted field styling:
+    .braintree-hosted-fields-focused
+    .braintree-hosted-fields-invalid
+    .braintree-hosted-fields-valid
+{% endcomment %]}
 <style type="text/css">
 .hosted-field {
     height: 2.375em;
@@ -1200,7 +1207,7 @@
     outline: none;
     border-bottom:4px solid orange;
 }
-.hosted-field.braintree-hosted-fields-invalid {
+.braintree-hosted-fields-invalid {
     border-color: {{ templateset.custom_fields.color_error|default:"#d00" }};
     background-color: #FFC8C8;
 }
@@ -1208,8 +1215,8 @@
 <script src="https://js.braintreegateway.com/web/3.12.1/js/client.min.js"></script>
 <script src="https://js.braintreegateway.com/web/3.12.1/js/hosted-fields.min.js"></script>
 <script src="https://js.braintreegateway.com/web/3.12.1/js/data-collector.min.js"></script>
-<!-- <script src="/resources/ak_braintree_vzero.js"></script> -->
-<script src="https://s3.amazonaws.com/s3.betterutah.org/scripts/ak_braintree_vzero_ptmod.js"></script>
+<script src="/resources/ak_braintree_vzero.js"></script>
+<!-- <script src="https://s3.amazonaws.com/s3.betterutah.org/scripts/ak_braintree_vzero_ptmod.js"></script> -->
 <script>
 $(function() {
     var form = document.querySelector("#act"),
