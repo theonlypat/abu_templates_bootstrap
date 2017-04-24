@@ -142,8 +142,12 @@ button {
 	width:100%;
 	background-color:#fff;
 	padding:.5rem;
-	margin-top:.5rem;
-	margin-bottom:.5rem;
+	margin-bottom:1rem;
+}
+.donation-input-label {
+	display: inline;
+	margin-bottom:0;
+	font-size:14px;
 }
 .donation-steps-box .btn-primary {
 	display: block;
