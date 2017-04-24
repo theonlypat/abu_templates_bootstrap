@@ -144,6 +144,10 @@ button {
 	padding:.5rem;
 	margin-bottom:1rem;
 }
+.donation-input:focus {
+	outline: none;
+	border-bottom:4px solid orange;
+}
 .donation-input-label {
 	display: inline;
 	margin-bottom:0;

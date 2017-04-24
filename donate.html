@@ -1196,6 +1196,10 @@
     background-color: white;
     border-bottom: 2px solid #00aeef;
 }
+.hosted-field:focus {
+    outline: none;
+    border-bottom:4px solid orange;
+}
 .hosted-field.braintree-hosted-fields-invalid {
     border-color: {{ templateset.custom_fields.color_error|default:"#d00" }};
     background-color: #FFC8C8;
