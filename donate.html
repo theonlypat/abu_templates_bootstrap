@@ -1196,7 +1196,7 @@
     background-color: white;
     border-bottom: 2px solid #00aeef;
 }
-iframe#credit-card-number:focus {
+.hosted-field.hosted-field-focus {
     outline: none;
     border-bottom:4px solid orange;
 }
@@ -1217,7 +1217,8 @@ $(function() {
             fields: {
                 number: {
                     selector: '#ak-card_num-hosted',
-                    placeholder: '•••• •••• •••• ••••'
+                    placeholder: '•••• •••• •••• ••••',
+                    class: 'hosted-field-focus'
                 },
                 cvv: {
                     selector: '#ak-card_code-hosted',
@@ -1232,8 +1233,7 @@ $(function() {
                 'input': {
                     'font-family': '{{ templateset.custom_fields.font_family|default:"sans-serif"|safe }}',
                     'font-size': '{{ templateset.custom_fields.font_size|default:"16.5px" }}',
-                    'color': '#4b4b4b',
-                    'border-bottom': 'solid 2px #000000'
+                    'color': '#4b4b4b'
                 },
                 'input:focus': {
                     'border-bottom': 'solid 2px orange',
