@@ -235,34 +235,34 @@
 
                     <h4 class="{% if not has_shippable_products %}ak-donate-three-step-hidden{% endif %}">Billing Address</h4>
 
-                    <div class="ak-labels-overlaid ak-errs-below test2">
+                    <div class="ak-errs-below test2">
                         <div>
-                            <label for="id_name">Name</label>
+                            <label class="donation-input-label" for="id_name">Name</label>
                             <input class="donation-input" id="id_name" type="text" name="name" placeholder="{{ user.name }}" value="{{ user.name }}">
                         </div>
                         <div>
-                            <label class="required" for="id_email">Email</label>
+                            <label class="donation-input-label" class="required" for="id_email">Email</label>
                             <input class="donation-input" id="id_email" type="text" name="email" placeholder="{{ user.email }}" value="{{ user.email }}">
                         </div>
                         {% if has_shippable_products %}
                         <div>
-                            <label for="id_address1">Billing address line 1</label>
+                            <label class="donation-input-label" for="id_address1">Billing address line 1</label>
                             <input class="donation-input" id="id_address1" type="text" name="address1" placeholder="{{ user.address1 }}" value="{{ user.address1 }}">
                         </div>
                         <div>
-                            <label for="id_address2">Billing address line 2 (optional)</label>
+                            <label class="donation-input-label" for="id_address2">Billing address line 2 (optional)</label>
                             <input class="donation-input" id="id_address2" type="text" name="address2" placeholder="{{ user.address2 }}" value="{{ user.address2 }}">
                         </div>
                         {% else %}
                         <div>
-                            <label for="id_address1">Billing address</label>
+                            <label class="donation-input-label" for="id_address1">Billing address</label>
                             <input class="donation-input" id="id_address1" type="text" name="address1" placeholder="{{ user.address1 }}" value="{{ user.address1 }}">
                         </div>
                         {% endif %}
                         <div class="row">
                             <div class="col-sm-6">
                             
-                                <label for="id_city">City</label>
+                                <label class="donation-input-label" for="id_city">City</label>
                                 <input class="donation-input" id="id_city" type="text" name="city" placeholder="{{ user.city }}" value="{{ user.city }}">
                             
                             </div>
@@ -281,24 +281,24 @@
                             <div class="ak-errs-below">
                                 <div class="ak-us-billing-fields">
                                     <input type="hidden" name="required" value="zip">
-                                    <label for="id_zip">Zip</label>
+                                    <label class="donation-input-label" for="id_zip">Zip</label>
                                     <input class="donation-input" id="id_zip" type="text" name="zip" maxlength="5" size="5" placeholder="{{ user.zip }}" value="{{ user.zip }}">
                                 </div>
                             </div>
                             </div>
                             <div class="col-sm-6">
-                                <label for="id_phone">Phone</label>
+                                <label class="donation-input-label" for="id_phone">Phone</label>
                                 <input class="donation-input" id="id_phone" type="text" name="phone" placeholder="{{ user.phone }}" value="{{ user.phone }}">
                             </div>
                         </div>
                         {% if page.allow_international %}
                         <div class="ak-errs-below" class="ak-intl-billing-fields">
                             <div>
-                                <label for="id_region">Region</label>
+                                <label class="donation-input-label" for="id_region">Region</label>
                                 <input id="id_region"  type="text" name="region" size="20">
                             </div>
                             <div>
-                                <label for="id_postal">Postal Code</label>
+                                <label class="donation-input-label" for="id_postal">Postal Code</label>
                                 <input id="id_postal"  type="text" name="postal" size="10">
                             </div>
                         </div>
