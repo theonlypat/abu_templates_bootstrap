@@ -551,7 +551,7 @@
 
         // look for checked off donation amounts
         // var amount_checked = $('input:radio[name=amount]:checked').val();
-        var amount_checked = $('.donation_amount_checked.donation_amount_radio').val();
+        var amount_checked = $('.donation_amount_checked > .donation_amount_radio').val();
         if (amount_checked) {
             total += parseFloat(amount_checked);
         } else {
