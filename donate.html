@@ -566,12 +566,18 @@
         return total;
     }
 
+    function tell_me() {
+        var amount_checked = $('input:radio[name=amount]:checked').val();
+        console.log(amount_checked);
+    }
+
     $(function() {
         $('.ak_product_inputs').on('change blur', update_total);
         $('.ak_candidate_inputs').on('change blur', update_total);
         $('.donation_amount_radio').on('change blur', update_total)
                                 .on('click', clear_other)
-                                .on('click', update_total);
+                                .on('click', update_total)
+                                .on('click', tell_me);
         $('#other-amount-field').on('change blur', update_total)
                                 .on('click keyup', clear_radio_buttons)
                                 .on('click', update_total);
