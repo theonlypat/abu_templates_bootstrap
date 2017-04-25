@@ -12,6 +12,9 @@ button {
 }
 
 /* DONATION STYLES */
+.ak-donate-three-step {
+	min-height:555px;
+}
 .donation-steps-box {
 	border-radius:4px;
 	padding:10px 22px;
@@ -151,6 +154,9 @@ button {
 .donation-input:focus {
 	outline: none;
 	border-bottom:2px solid orange;
+}
+#id_state {
+	margin-bottom: 1rem;
 }
 #other-amount-field:focus {
 	/*border-color:orange;
