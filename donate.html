@@ -180,7 +180,7 @@
                         </div>
                         {% else %}
                         <div class="donation_amount">
-                            <input type="radio" aria-label="Select {{amount}}" id="id_amount_{{amount}}" value="{{ amount }}" aria-label="{amount}}" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>
+                            <input type="radio" aria-label="Select {{amount}}" id="id_amount_{{amount}}" class="donation_amount_radio" value="{{ amount }}" aria-label="{amount}}" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>
                             <label class="">{{ page.currency_sym }}{{ amount|commify }}</label>
                         </div>
                         {% endif %}
@@ -504,11 +504,11 @@
 <script language="javascript">
 //<!--
     function clear_radio_buttons() {
-        $('input.ak-amount-radio-button').prop('checked', false);
+        $('input.donation_amount_radio').prop('checked', false);
     }
 
     function clear_other() {
-        $('#ak-other-amount-field').val("");
+        $('#other-amount-field').val("");
     }
 
     function product_info(id) {
@@ -555,7 +555,7 @@
             total += parseFloat(amount_checked);
         } else {
             // or other amounts
-            var other = $('#ak-other-amount-field').val();
+            var other = $('#other-amount-field').val();
             if (typeof other !== "undefined" &&
                 other.length && /^\d*(\.\d{1,2})?$/.test(other))
                 total += parseFloat(other);
@@ -569,10 +569,10 @@
     $(function() {
         $('.ak_product_inputs').on('change blur', update_total);
         $('.ak_candidate_inputs').on('change blur', update_total);
-        $('.ak-amount-radio-button').on('change blur', update_total)
+        $('.donation_amount_radio').on('change blur', update_total)
                                 .on('click', clear_other)
                                 .on('click', update_total);
-        $('#ak-other-amount-field').on('change blur', update_total)
+        $('#other-amount-field').on('change blur', update_total)
                                 .on('click keyup', clear_radio_buttons)
                                 .on('click', update_total);
     });
