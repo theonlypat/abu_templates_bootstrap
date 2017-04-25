@@ -724,6 +724,7 @@
     var three_step_initialized = 0;
     function three_step_reveal() {
         var current_step = $('input[name="ak-donate-step"]:checked').val();
+        console.log($('input[name="ak-donate-step"]:checked').val(););
 
         if ( current_step != "2" && current_step != "3" ) {
             current_step = "1"
@@ -746,7 +747,7 @@
         }
     }
 
-    console.log($('input[name="ak-donate-step"]:checked').val(););
+
 
     function focus_field_if_blank ( field_elt ) {
         return ( function () {
