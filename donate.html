@@ -238,32 +238,32 @@
                     <div class="ak-errs-below test2">
                         <div>
                             <label class="donation-input-label" for="id_name">Name</label>
-                            <input class="donation-input" id="id_name" type="text" name="name" placeholder="{{ user.name }}" value="{{ user.name }}">
+                            <input class="donation-input" id="id_name" type="text" name="name" placeholder="Jane Doe" value="{{ user.name }}">
                         </div>
                         <div>
                             <label class="donation-input-label" class="required" for="id_email">Email</label>
-                            <input class="donation-input" id="id_email" type="text" name="email" placeholder="{{ user.email }}" value="{{ user.email }}">
+                            <input class="donation-input" id="id_email" type="text" name="email" placeholder="janedoe@betterutah.org" value="{{ user.email }}">
                         </div>
                         {% if has_shippable_products %}
                         <div>
                             <label class="donation-input-label" for="id_address1">Billing address line 1</label>
-                            <input class="donation-input" id="id_address1" type="text" name="address1" placeholder="{{ user.address1 }}" value="{{ user.address1 }}">
+                            <input class="donation-input" id="id_address1" type="text" name="address1" placeholder="123 Eevergreen Terrace" value="{{ user.address1 }}">
                         </div>
                         <div>
                             <label class="donation-input-label" for="id_address2">Billing address line 2 (optional)</label>
-                            <input class="donation-input" id="id_address2" type="text" name="address2" placeholder="{{ user.address2 }}" value="{{ user.address2 }}">
+                            <input class="donation-input" id="id_address2" type="text" name="address2" placeholder="Apt 1" value="{{ user.address2 }}">
                         </div>
                         {% else %}
                         <div>
                             <label class="donation-input-label" for="id_address1">Billing address</label>
-                            <input class="donation-input" id="id_address1" type="text" name="address1" placeholder="{{ user.address1 }}" value="{{ user.address1 }}">
+                            <input class="donation-input" id="id_address1" type="text" name="address1" placeholder="123 Evergreen Terrace" value="{{ user.address1 }}">
                         </div>
                         {% endif %}
                         <div class="row">
                             <div class="col-sm-6">
                             
                                 <label class="donation-input-label" for="id_city">City</label>
-                                <input class="donation-input" id="id_city" type="text" name="city" placeholder="{{ user.city }}" value="{{ user.city }}">
+                                <input class="donation-input" id="id_city" type="text" name="city" placeholder="Salt Lake City" value="{{ user.city }}">
                             
                             </div>
                             <div class="col-sm-6">
@@ -282,13 +282,13 @@
                                 <div class="ak-us-billing-fields">
                                     <input type="hidden" name="required" value="zip">
                                     <label class="donation-input-label" for="id_zip">Zip</label>
-                                    <input class="donation-input" id="id_zip" type="text" name="zip" maxlength="5" size="5" placeholder="{{ user.zip }}" value="{{ user.zip }}">
+                                    <input class="donation-input" id="id_zip" type="text" name="zip" maxlength="5" size="5" placeholder="84112" value="{{ user.zip }}">
                                 </div>
                             </div>
                             </div>
                             <div class="col-sm-6">
                                 <label class="donation-input-label" for="id_phone">Phone</label>
-                                <input class="donation-input" id="id_phone" type="text" name="phone" placeholder="{{ user.phone }}" value="{{ user.phone }}">
+                                <input class="donation-input" id="id_phone" type="text" name="phone" placeholder="8011234567" value="{{ user.phone }}">
                             </div>
                         </div>
                         {% if page.allow_international %}
