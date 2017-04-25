@@ -46,7 +46,7 @@
                     {% endfilter %}
                 {% else %}
                     {% filter ak_text:"notaf_thanks_banner" %}
-                    Thank You{% if user.name %}, {% user.name %}{% endif %}!
+                    Thank You{% if user.name %}, {{ user.name }}{% endif %}!
                     {% endfilter %}
                 {% endif %}
             </h2>
