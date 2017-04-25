@@ -550,7 +550,8 @@
         });
 
         // look for checked off donation amounts
-        var amount_checked = $('input:radio[name=amount]:checked').val();
+        // var amount_checked = $('input:radio[name=amount]:checked').val();
+        var amount_checked = $('input.donation_amount_radio_checked').val();
         if (amount_checked) {
             total += parseFloat(amount_checked);
         } else {
