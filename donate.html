@@ -724,13 +724,11 @@
     var three_step_initialized = 0;
     function three_step_reveal() {
         var current_step = $('input[name="ak-donate-step"]:checked').val();
-        console.log($('input[name="ak-donate-step"]:checked').val());
 
         if ( current_step != "2" && current_step != "3" ) {
             current_step = "1"
         }
-        console.log(three_step_initialized);
-        var speed = three_step_initialized ? 1 : 1000;
+        var speed = three_step_initialized ? 1 : 400;
         console.log(speed);
         if ( current_step == "1" ) {
             $('.ak-donate-area-step-2, .ak-donate-area-step-3').hide();
