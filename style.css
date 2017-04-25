@@ -27,16 +27,19 @@ button {
 	width:100%;
 	height:50px;
 	text-align: center;
-	/*border:2px solid #eee;*/
 	border-radius:4px;
 	padding-top:1rem;
 	padding-bottom:2.5rem;
 	cursor:pointer;
 	margin-bottom:10px;
+	transition: all 200ms ease;
 }
 .donation_amount:hover {
 	background-color: #0089bc;
 	color:#fff;
+}
+.donation_amount label:hover {
+	cursor:pointer;
 }
 .donation_amount_checked {
 	background-color:#00aeef;
@@ -143,10 +146,16 @@ button {
 	background-color:#fff;
 	padding:.5rem;
 	margin-bottom:1rem;
+	transition: border-color 200ms ease;
 }
 .donation-input:focus {
 	outline: none;
-	border-bottom:4px solid orange;
+	border-bottom:2px solid orange;
+}
+#other-amount-field:focus {
+	border-color:orange;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(250, 175, 0, 0.6);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(250, 175, 0, 0.6)
 }
 .donation-input-label {
 	display: inline;

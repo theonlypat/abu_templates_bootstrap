@@ -595,7 +595,7 @@
     //     );
     // });
 
-    /* Amount buttons */
+    /* Amount buttons - Custom Pat Mod */
     function highlight_selected_amount_button() {
         $('.donation_amount_checked').removeClass('donation_amount_checked');
         $(this).closest('.donation_amount').addClass('donation_amount_checked');
@@ -724,6 +724,7 @@
     var three_step_initialized = 0;
     function three_step_reveal() {
         var current_step = $('input[name="ak-donate-step"]:checked').val();
+        console.log(current_step);
         if ( current_step != "2" && current_step != "3" ) {
             current_step = "1"
         }
