@@ -50,6 +50,7 @@
                     {% endfilter %}
                 {% endif %}
             </h2>
+            {% ifequal page.type 'letter' %}
             <div>
                 <p>Your message was sent to:<p>
                 {% for target in context.targets.targets %}
@@ -60,6 +61,7 @@
                 {% endfor %} 
                 {% include_tmpl form.thank_you_text %}
             </div>
+            {% endifequal %}
             <div>
                 {% if page.followup.send_taf and args.taf %}
                     <p>Use the share link and email link to share this form with your family, friends, and neighbors.<p>
