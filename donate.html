@@ -599,7 +599,7 @@
     function highlight_selected_amount_button() {
         $('.donation_amount_checked').removeClass('donation_amount_checked');
         $(this).closest('.donation_amount').addClass('donation_amount_checked');
-        $(this).prop('checked', true);
+        $(this + '.donation_amount_radio').prop('checked', true);
     }
     $(function() {
         $('.donation_amount').on(
