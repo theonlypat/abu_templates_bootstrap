@@ -1265,6 +1265,26 @@ function getAllUrlParams(url) {
 console.log(getAllUrlParams().akid);
 console.log(getAllUrlParams().member);
 console.log(getAllUrlParams().level);
+
+if (getAllUrlParams().level) {
+    clear_other();
+    clear_radio_buttons();
+    switch(getAllUrlParams().level) {
+        case "$10.00":
+            $("#id_amount_10").prop("checked", true);
+            break;
+        case "$25.00":
+            $("#id_amount_25").prop("checked", true);
+            break;
+        case "$50.00":
+            $("#id_amount_50").prop("checked", true);
+            break;
+        case "$100.00":
+            $("#id_amount_100").prop("checked", true);
+            break;
+    }
+}
+
 </script>
 
 {% with page.payment_processor_information as pp %}
