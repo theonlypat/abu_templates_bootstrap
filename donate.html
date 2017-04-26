@@ -1262,23 +1262,26 @@ function getAllUrlParams(url) {
   return obj;
 }
 
+var level = getAllUrlParams().level;
 console.log(getAllUrlParams().akid);
 console.log(getAllUrlParams().member);
-console.log(getAllUrlParams().level);
+console.log(level);
 
-if (getAllUrlParams().level != "") {
+if (level != "") {
     clear_other();
     clear_radio_buttons();
-    switch(getAllUrlParams().level) {
+    switch(level) {
         case "10.00":
             $("#id_amount_10").prop("checked", true);
             $('.donation_amount_checked').removeClass('donation_amount_checked');
             $('#id_amount_10').parent().addClass('donation_amount_checked');
+            console.log($('#id_amount_10').parent());
             break;
         case "25.00":
             $("#id_amount_25").prop("checked", true);
             $('.donation_amount_checked').removeClass('donation_amount_checked');
             $('#id_amount_25').parent().addClass('donation_amount_checked');
+            console.log($('#id_amount_25').parent());
             break;
         case "50.00":
             $("#id_amount_50").prop("checked", true);
