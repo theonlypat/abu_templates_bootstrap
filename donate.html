@@ -1266,7 +1266,7 @@ console.log(getAllUrlParams().akid);
 console.log(getAllUrlParams().member);
 console.log(getAllUrlParams().level);
 
-if (getAllUrlParams().level) {
+if (getAllUrlParams().level != "") {
     clear_other();
     clear_radio_buttons();
     switch(getAllUrlParams().level) {
