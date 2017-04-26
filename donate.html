@@ -1270,20 +1270,20 @@ if (getAllUrlParams().level != "") {
     clear_other();
     clear_radio_buttons();
     switch(getAllUrlParams().level) {
-        case "$10.00":
+        case "10.00":
             $("#id_amount_10").prop("checked", true);
             $('.donation_amount_checked').removeClass('donation_amount_checked');
             $('#id_amount_10').parent().addClass('donation_amount_checked');
             break;
-        case "$25.00":
+        case "25.00":
             $("#id_amount_25").prop("checked", true);
             $('.donation_amount_checked').removeClass('donation_amount_checked');
             $('#id_amount_25').parent().addClass('donation_amount_checked');
             break;
-        case "$50.00":
+        case "50.00":
             $("#id_amount_50").prop("checked", true);
             break;
-        case "$100.00":
+        case "100.00":
             $("#id_amount_100").prop("checked", true);
             break;
     }
