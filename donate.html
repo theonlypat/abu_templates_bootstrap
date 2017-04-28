@@ -182,8 +182,22 @@
                             </div>
                             {% else %}
                             <div class="donation_amount">
-                                <input type="radio" aria-label="Select {{amount}}" id="id_amount_{{amount}}" class="donation_amount_radio" value="{{ amount }}" aria-label="{amount}}" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>
-                                <label class="">{{ page.currency_sym }}{{ amount|commify }}</label>
+                                {% if page.custom_fields.membership_level_10 %}
+                                    <input type="radio" aria-label="Select {{amount}}" id="id_amount_{{amount}}" class="donation_amount_radio" value="{{ amount }}" aria-label="{{amount}} {{ page.custom_fields.membership_level_10 }}" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>
+                                    <label class="">{{ page.currency_sym }}{{ amount|commify }}—{{ page.custom_fields.membership_level_10 }}</label>
+                                {% elif page.custom_fields.membership_level_25 %}
+                                    <input type="radio" aria-label="Select {{amount}}" id="id_amount_{{amount}}" class="donation_amount_radio" value="{{ amount }}" aria-label="{{amount}} {{ page.custom_fields.membership_level_10 }}" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>
+                                    <label class="">{{ page.currency_sym }}{{ amount|commify }}—{{ page.custom_fields.membership_level_25 }}</label>
+                                {% elif page.custom_fields.membership_level_50 %}
+                                    <input type="radio" aria-label="Select {{amount}}" id="id_amount_{{amount}}" class="donation_amount_radio" value="{{ amount }}" aria-label="{{amount}} {{ page.custom_fields.membership_level_10 }}" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>
+                                    <label class="">{{ page.currency_sym }}{{ amount|commify }}—{{ page.custom_fields.membership_level_50 }}</label>
+                                {% elif page.custom_fields.membership_level_100 %}
+                                    <input type="radio" aria-label="Select {{amount}}" id="id_amount_{{amount}}" class="donation_amount_radio" value="{{ amount }}" aria-label="{{amount}} {{ page.custom_fields.membership_level_10 }}" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>
+                                    <label class="">{{ page.currency_sym }}{{ amount|commify }}—{{ page.custom_fields.membership_level_100 }}</label>
+                                {% else %}
+                                    <input type="radio" aria-label="Select {{amount}}" id="id_amount_{{amount}}" class="donation_amount_radio" value="{{ amount }}" aria-label="{{amount}}" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>
+                                    <label class="">{{ page.currency_sym }}{{ amount|commify }}</label>
+                                {% endif %}
                             </div>
                             {% endif %}
                             {% endfor %}
@@ -202,8 +216,22 @@
                             </div>
                             {% else %}
                             <div class="donation_amount">
-                                <input type="radio" aria-label="Select {{amount}}" id="id_amount_{{amount}}" class="donation_amount_radio" value="{{ amount }}" aria-label="{amount}}" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>
-                                <label class="">{{ page.currency_sym }}{{ amount|commify }}</label>
+                                {% if page.custom_fields.membership_level_10 %}
+                                    <input type="radio" aria-label="Select {{amount}}" id="id_amount_{{amount}}" class="donation_amount_radio" value="{{ amount }}" aria-label="{{amount}} {{ page.custom_fields.membership_level_10 }}" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>
+                                    <label class="">{{ page.currency_sym }}{{ amount|commify }}—{{ page.custom_fields.membership_level_10 }}</label>
+                                {% elif page.custom_fields.membership_level_25 %}
+                                    <input type="radio" aria-label="Select {{amount}}" id="id_amount_{{amount}}" class="donation_amount_radio" value="{{ amount }}" aria-label="{{amount}} {{ page.custom_fields.membership_level_10 }}" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>
+                                    <label class="">{{ page.currency_sym }}{{ amount|commify }}—{{ page.custom_fields.membership_level_25 }}</label>
+                                {% elif page.custom_fields.membership_level_50 %}
+                                    <input type="radio" aria-label="Select {{amount}}" id="id_amount_{{amount}}" class="donation_amount_radio" value="{{ amount }}" aria-label="{{amount}} {{ page.custom_fields.membership_level_10 }}" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>
+                                    <label class="">{{ page.currency_sym }}{{ amount|commify }}—{{ page.custom_fields.membership_level_50 }}</label>
+                                {% elif page.custom_fields.membership_level_100 %}
+                                    <input type="radio" aria-label="Select {{amount}}" id="id_amount_{{amount}}" class="donation_amount_radio" value="{{ amount }}" aria-label="{{amount}} {{ page.custom_fields.membership_level_10 }}" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>
+                                    <label class="">{{ page.currency_sym }}{{ amount|commify }}—{{ page.custom_fields.membership_level_100 }}</label>
+                                {% else %}
+                                    <input type="radio" aria-label="Select {{amount}}" id="id_amount_{{amount}}" class="donation_amount_radio" value="{{ amount }}" aria-label="{{amount}}" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>
+                                    <label class="">{{ page.currency_sym }}{{ amount|commify }}</label>
+                                {% endif %}
                             </div>
                             {% endif %}
                             {% endfor %}
