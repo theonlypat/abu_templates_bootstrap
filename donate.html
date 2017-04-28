@@ -170,23 +170,47 @@
                 <div class="row">
                  <div class="col-md-10 col-md-offset-1">
                    <div class="row">
-                    {% for row in amounts|columns:3 %}
-                    <div class="col-md-4" style="margin-bottom:10px">
-                        {% for amount in row %}
-                        {% if amount == "other" %}
-                        <div class="input-group other_donation_amount">
-                            <span class="input-group-addon donation-amount-input-group-addon" id="">{{ page.currency_sym }}</span>
-                            <input type="text" class="form-control" id="other-amount-field" name="amount_other" placeholder="Amount" aria-label="Other amount (in {{ page.currency_sym }})">
+                    {% if {{ amounts:length }} > 6 %}
+
+                        {% for row in amounts|columns:3 %}
+                        <div class="col-md-4" style="margin-bottom:10px">
+                            {% for amount in row %}
+                            {% if amount == "other" %}
+                            <div class="input-group other_donation_amount">
+                                <span class="input-group-addon donation-amount-input-group-addon" id="">{{ page.currency_sym }}</span>
+                                <input type="text" class="form-control" id="other-amount-field" name="amount_other" placeholder="Amount" aria-label="Other amount (in {{ page.currency_sym }})">
+                            </div>
+                            {% else %}
+                            <div class="donation_amount">
+                                <input type="radio" aria-label="Select {{amount}}" id="id_amount_{{amount}}" class="donation_amount_radio" value="{{ amount }}" aria-label="{amount}}" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>
+                                <label class="">{{ page.currency_sym }}{{ amount|commify }}</label>
+                            </div>
+                            {% endif %}
+                            {% endfor %}
                         </div>
-                        {% else %}
-                        <div class="donation_amount">
-                            <input type="radio" aria-label="Select {{amount}}" id="id_amount_{{amount}}" class="donation_amount_radio" value="{{ amount }}" aria-label="{amount}}" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>
-                            <label class="">{{ page.currency_sym }}{{ amount|commify }}</label>
-                        </div>
-                        {% endif %}
                         {% endfor %}
-                    </div>
-                    {% endfor %}
+
+                    {% else %}
+
+                        {% for row in amounts|columns:2 %}
+                        <div class="col-md-6" style="margin-bottom:10px">
+                            {% for amount in row %}
+                            {% if amount == "other" %}
+                            <div class="input-group other_donation_amount">
+                                <span class="input-group-addon donation-amount-input-group-addon" id="">{{ page.currency_sym }}</span>
+                                <input type="text" class="form-control" id="other-amount-field" name="amount_other" placeholder="Amount" aria-label="Other amount (in {{ page.currency_sym }})">
+                            </div>
+                            {% else %}
+                            <div class="donation_amount">
+                                <input type="radio" aria-label="Select {{amount}}" id="id_amount_{{amount}}" class="donation_amount_radio" value="{{ amount }}" aria-label="{amount}}" name="amount" {% if not args.amount_other and amount == default_amount %}checked{% endif %}>
+                                <label class="">{{ page.currency_sym }}{{ amount|commify }}</label>
+                            </div>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                        {% endfor %}
+
+                    {% endif %}
                    </div>
                  </div>
                 </div>
@@ -1266,31 +1290,6 @@ var level = getAllUrlParams().level;
 console.log(getAllUrlParams().akid);
 console.log(getAllUrlParams().member);
 console.log(level);
-
-if (level != "") {
-    clear_other();
-    clear_radio_buttons();
-    switch(level) {
-        case "10.00":
-            $("#id_amount_10").prop("checked", true);
-            $('.donation_amount_checked').removeClass('donation_amount_checked');
-            $('#id_amount_10').parent(".donation_amount").addClass('donation_amount_checked');
-            console.log($('#id_amount_10').parent());
-            break;
-        case "25.00":
-            $("#id_amount_25").prop("checked", true);
-            $('.donation_amount_checked').removeClass('donation_amount_checked');
-            $('#id_amount_25').parent(".donation_amount").addClass('donation_amount_checked');
-            console.log($('#id_amount_25').parent(".donation_amount"));
-            break;
-        case "50.00":
-            $("#id_amount_50").prop("checked", true);
-            break;
-        case "100.00":
-            $("#id_amount_100").prop("checked", true);
-            break;
-    }
-}
 
 </script>
 
