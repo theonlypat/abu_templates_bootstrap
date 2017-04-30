@@ -6,16 +6,19 @@
     <input type="hidden" name="page" value="{{ page.name }}">
     <input type="hidden" name="orig_akid" value="{{ akid }}">
 
-    <!-- <div class="row">
-        <div class="col-md-12">
+    <div class="row" class="page-hero" {% if templateset.custom_fields.color_page %} style="background-color:{{ templateset.custom_fields.color_page }}" {% endif %}>
+        <div class="col-md-5 col-md-offset-1">
             <h2>{{ page.title }}</h2>
         </div>
-    </div> -->
+        <div class="col-md-5 col-md-offset-1">
+            {% include_tmpl form.ask_text %}
+        </div>
+    </div>
 
     <div class="row">
 
         <div class="col-md-5 col-md-offset-1">
-           {% if page.custom_fields.featured_image %}
+            {% if page.custom_fields.featured_image %}
             <img class="ak-featured-img" src="{{page.custom_fields.featured_image}}">
             {% endif %}
             <div>{% include "./progress_meter.html" %}</div>
