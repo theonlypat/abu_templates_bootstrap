@@ -6,12 +6,12 @@
     <input type="hidden" name="page" value="{{ page.name }}">
     <input type="hidden" name="orig_akid" value="{{ akid }}">
 
-    <div class="row" class="page-hero" {% if templateset.custom_fields.color_page %} style="background-color:{{ templateset.custom_fields.color_page }}" {% endif %}>
+    <div class="row" class="page-hero" {% if custom_fields.page_hero_background_color %} style="background-color:{{ custom_fields.page_hero_background_color }}" {% endif %}>
         <div class="col-md-5 col-md-offset-1">
             <h2>{{ page.title }}</h2>
         </div>
         <div class="col-md-5 col-md-offset-1">
-            {% include_tmpl form.ask_text %}
+            {{ custom_fields.page_ask_text_preview }}
         </div>
     </div>
 
