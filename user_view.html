@@ -23,9 +23,9 @@
         {% endif %}
 
         <ul class="">
-        {% for list in actionkit_user.subscriptions %}
+        {% for subscription in actionkit_user.subscriptions %}
             <li>
-                {{ list.name }}
+                {{ subscription.list.name }}
             </li>
         {% endfor %}
         </ul>
