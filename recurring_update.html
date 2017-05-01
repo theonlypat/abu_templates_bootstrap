@@ -194,7 +194,7 @@ function onStripeResponse(status, response) {
 
 <div class="row">
     <div class="col-md-12">
-        <h2>{{ page.title }}</h2>
+        <h2 class="text-center">{{ page.title }}</h2>
     </div>
 </div>
 
@@ -204,7 +204,7 @@ function onStripeResponse(status, response) {
             <img class="ak-featured-img" src="{{page.custom_fields.featured_image}}">
         </div>
     {% endif %}
-    <div class="{% if page.custom_fields.featured_image %} col-md-9 {% else %} col-md-12 {% endif %}">
+    <div class="{% if page.custom_fields.featured_image %} col-md-9 {% else %} col-md-4 col-md-offset-4 {% endif %}">
 
         <div>
             <p>Logged in as {{ logged_in_user.name }}. <a href="/logout/">Log out</a></p>
