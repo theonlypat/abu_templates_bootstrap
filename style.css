@@ -13,6 +13,11 @@ html {
 .page-hero {
 	min-height:350px;
 }
+.page-hero-preview {
+	margin-top:25px;
+	color:#ffffff;
+	font-size:32px;
+}
 
 button {
 	height:initial;
