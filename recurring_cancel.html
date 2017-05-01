@@ -2,8 +2,8 @@
 
 {% block content %}
 
-<div class="ak-grid-row">
-    <div class="ak-grid-col ak-grid-col-12-of-12">
+<div class="row">
+    <div class="col-md-12">
         <h2>{{ page.title }}</h2>
     </div>
     <div>
@@ -13,15 +13,15 @@
      </div>
 </div>
 
-<div class="ak-grid-row ak-grid-row-inverted">
+<div class="row">
 
     {% if page.custom_fields.featured_image %}
-    <div class="ak-grid-col ak-grid-col-3-of-12">
+    <div class="col-md-3">
         <img class="ak-featured-img" src="{{page.custom_fields.featured_image}}">
     </div>
     {% endif %}
 
-    <div class="ak-grid-col {% if page.custom_fields.featured_image %}ak-grid-col-9-of-12{% else %}ak-grid-col-12-of-12{% endif %}">
+    <div class="{% if page.custom_fields.featured_image %}col-md-9{% else %}col-md-12{% endif %}">
 
         {% if not active %}
 
