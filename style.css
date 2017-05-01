@@ -13,14 +13,14 @@ html {
 .page-hero {
 	min-height:350px;
 }
-.page-hero-heading {
+.page-hero-heading h2 {
 	font-size:90px;
 	color:#fff;
 }
 .page-hero-preview {
 	margin-top:25px;
 	color:#ffffff;
-	font-size:32px;
+	font-size:26px;
 	line-height: 1.75;
 }
 
