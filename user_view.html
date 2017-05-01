@@ -22,6 +22,8 @@
             </ul>
         {% endif %}
 
+        {{ actionkit_user.subscriptions|pprint }}
+
         <ul class="">
         {% for subscription in actionkit_user.subscriptions %}
             <li>
