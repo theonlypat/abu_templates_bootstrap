@@ -7,7 +7,7 @@
     <input type="hidden" name="orig_akid" value="{{ akid }}">
 
     <div class="row page-hero" {% if page.custom_fields.page_hero_background_color %} style="background-color:{{ page.custom_fields.page_hero_background_color }}" {% endif %}>
-        <div class="col-md-5 col-md-offset-1 page-hero-heading" {% if page.custom_fields.page_hero_image %} style="background-image:url({{ page.custom_fields.page_hero_image }}); background-size: cover; height: 100%;" {% endif %}>
+        <div class="col-md-5 col-md-offset-1 page-hero-heading" {% if page.custom_fields.page_hero_image %} style="background-image:url({{ page.custom_fields.page_hero_image }}); background-size: cover; height: 100%; background-repeat: no-repeat; background-position: 78px 105px;" {% endif %}>
             <h2>{{ page.title }}</h2>
         </div>
         <div class="col-md-4 col-md-offset-1 page-hero-preview">
