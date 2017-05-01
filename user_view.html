@@ -6,7 +6,7 @@
     <div class="col-md-6 col-md-offset-3">
         <h2 class="ak-display-inline-block">{{ actionkit_user.name }} 
         {% for subscription in actionkit_user.subscriptions %}
-        {% if "test_list" in subscription.list %} | <em>Member</em>{% endif %}
+        {% if "test_list" in subscription.list.name %} | <em>Member</em>{% endif %}
         {% endfor %}
         </h2> 
         &nbsp; <a href="/logout/">Log Out</a>
