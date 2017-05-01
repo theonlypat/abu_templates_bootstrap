@@ -274,11 +274,11 @@
                     {% if allow_monthly %}
                         <div id="ak-recurring-type" class="ak-donate-area-step-1 control-group">
                             <label for="id_donation_type_single" class="control control--radio">One-Time
-                                <input type="radio" name="donation_type" id="id_donation_type_single" value="single" checked>
+                                <input type="radio" name="donation_type" id="id_donation_type_single" value="single" {% if not page.custom_fields.donate_monthly_checked %} checked {% endif %}>
                                 <div class="control__indicator"></div>
                             </label>
                             <label for="id_donation_type_recurring" class="control control--radio">Sustaining Member (Monthly)
-                                <input type="radio" name="donation_type" id="id_donation_type_recurring" value="recurring">
+                                <input type="radio" name="donation_type" id="id_donation_type_recurring" value="recurring" {% if page.custom_fields.donate_monthly_checked %} checked {% endif %}>
                                 <div class="control__indicator"></div>
                             </label>
                         </div>
