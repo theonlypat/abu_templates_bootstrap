@@ -13,10 +13,15 @@ html {
 .page-hero {
 	min-height:350px;
 }
+.page-hero-heading {
+	font-size:90px;
+	color:#fff;
+}
 .page-hero-preview {
 	margin-top:25px;
 	color:#ffffff;
 	font-size:32px;
+	line-height: 1.75;
 }
 
 button {
