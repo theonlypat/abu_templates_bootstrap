@@ -22,7 +22,9 @@
             </ul>
         {% endif %}
 
-        {{ actionkit_user|pprint }}
+        {% for subscription in actionkit_user.subscriptions %}
+            {{ subscription.list|pprint }}
+        {% endfor %}
 
         <ul class="">
         {% for subscription in actionkit_user.subscriptions %}
