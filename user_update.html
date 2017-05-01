@@ -9,16 +9,16 @@
 {% if updated %}
 <div class="row">
     <div class="col-md-12">
-        <p>Thanks! We've updated your information.</p>
+        <p class="text-center">Thanks! We've updated your information.</p>
     </div>
 </div>
 {% endif %}
 
 <div class="row">
     <div class="col-md-12">
-        <h2 class="center-block">Update Your Account</h2>
+        <h2 class="center-block text-center">Update Your Account</h2>
         {% if user %}
-        <p class="center-block">
+        <p class="center-block text-center">
             You are logged in as {{ user.name }}. <a href="/logout">Log out</a>
         </p>
         {% endif %}
