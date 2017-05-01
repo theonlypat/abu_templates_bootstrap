@@ -204,7 +204,7 @@ function onStripeResponse(status, response) {
             <img class="ak-featured-img" src="{{page.custom_fields.featured_image}}">
         </div>
     {% endif %}
-    <div class="{% if page.custom_fields.featured_image %} col-md-9 {% else %} col-md-4 col-md-offset-4 {% endif %}">
+    <div class="{% if page.custom_fields.featured_image %} col-md-9 {% else %} col-md-6 col-md-offset-3 {% endif %}">
 
         <div>
             <p>Logged in as {{ logged_in_user.name }}. <a href="/logout/">Log out</a></p>
