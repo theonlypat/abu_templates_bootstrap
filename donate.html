@@ -6,7 +6,7 @@
     <input type="hidden" name="page" value="{{ page.name }}">
     <input type="hidden" name="orig_akid" value="{{ akid }}">
 
-    <div class="row" class="page-hero" {% if page.custom_fields.page_hero_background_color %} style="background-color:{{ page.custom_fields.page_hero_background_color }}" {% endif %}>
+    <div class="row page-hero" {% if page.custom_fields.page_hero_background_color %} style="background-color:{{ page.custom_fields.page_hero_background_color }}" {% endif %}>
         <div class="col-md-5 col-md-offset-1">
             <h2>{{ page.title }}</h2>
         </div>
