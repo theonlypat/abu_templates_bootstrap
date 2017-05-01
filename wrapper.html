@@ -278,7 +278,7 @@
         </div>
     </nav>
 
-    <div class="container-fluid">
+    <div class="container-fluid {% if page.custom_fields.page_hero_background_color %} hero-container {% endif %}">
 
         {% block content %}{% endblock %}
 

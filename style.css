@@ -6,12 +6,17 @@ html {
 	margin-bottom:0;
 }
 
+.hero-container {
+	margin-top: 0;
+    border-top: solid 10px #eee;
+}
 .row {
 	margin-top:10px;
 	margin-bottom:15px;
 }
 .page-hero {
 	min-height:350px;
+	margin-top:0!important;
 }
 .page-hero-heading h2 {
 	font-size:90px;
