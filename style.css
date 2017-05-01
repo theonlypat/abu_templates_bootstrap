@@ -2,6 +2,10 @@ html {
 	
 }
 
+.navbar-margin {
+	margin-bottom:0;
+}
+
 .row {
 	margin-top:10px;
 	margin-bottom:15px;
