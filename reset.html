@@ -3,8 +3,8 @@
 
 {% block content %}
 
-<div class="ak-grid-row">
-    <div class="ak-grid-col ak-grid-col-4-of-12 ak-grid-centered">
+<div class="row">
+    <div class="col-md-4 center-block">
         <p>Fill out the form below and we'll set your password.</p>
         {% if message %}
             <p class="ak-large-text">{{ message }}</p>
@@ -28,7 +28,7 @@
             {% endfor %}
             
             <div class="submit-row">
-                <button type="submit" class="ak-submit-button">Update</button>
+                <button type="submit" class="ak-submit-button btn btn-primary">Update</button>
             </div>
         </form>
     </div>
