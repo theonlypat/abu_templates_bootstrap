@@ -4,7 +4,7 @@
 {% block content %}
 
 <div class="row">
-    <div class="col-md-4 center-block">
+    <div class="col-md-4 col-md-offset-4">
         <p>Fill out the form below and we'll set your password.</p>
         {% if message %}
             <p class="ak-large-text">{{ message }}</p>
@@ -28,7 +28,7 @@
             {% endfor %}
             
             <div class="submit-row">
-                <button type="submit" class="ak-submit-button btn btn-primary">Update</button>
+                <button type="submit" class="ak-submit-button btn btn-primary center-block">Update</button>
             </div>
         </form>
     </div>
