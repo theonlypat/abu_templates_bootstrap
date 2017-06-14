@@ -682,6 +682,7 @@
     $(function() {
         $('.donation_amount').on(
             'click', highlight_selected_amount_button).on('click', change_checked_amount);
+        $(".donation_amount").on("click", tell_me);
         $('#other-amount-field').on(
             'click change', highlight_selected_amount_button).on('click', change_checked_amount);
 
