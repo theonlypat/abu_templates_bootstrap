@@ -671,11 +671,15 @@
         $('.donation_amount_checked').removeClass('donation_amount_checked');
         $(this).closest('.donation_amount').addClass('donation_amount_checked');
     }
+    function change_checked_amount() {
+      var donation_val = $(".donation_amount_checked > .donation_amount_radio").val();
+       $(this).children().prop("checked", true);
+    }
     $(function() {
         $('.donation_amount').on(
-            'click', highlight_selected_amount_button);
+            'click', highlight_selected_amount_button).on('click', change_checked_amount);
         $('#other-amount-field').on(
-            'click change', highlight_selected_amount_button);
+            'click change', highlight_selected_amount_button).on('click', change_checked_amount);
 
         // Make sure label is highlighted if an amount is pre-selected
         highlight_selected_amount_button.call(
