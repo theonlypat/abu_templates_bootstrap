@@ -632,8 +632,11 @@
     }
 
     function tell_me() {
-        var amount_checked = $('.donation_amount_checked > .donation_amount_radio').val();
-        // console.log(amount_checked);
+        var amount_clicked = $(".donation_amount_checked > .donation_amount_radio").val();
+        var amount_checked = $('input:radio[name=amount]:checked').val();
+        var is_amount_checked = $(".donation_amount_checked > .donation_amount_radio").prop("checked");
+        // $(".whats_checked").html(amount_clicked + " " + amount_checked + " " + is_amount_checked);
+        console.log(amount_clicked + " " + amount_checked + " " + is_amount_checked);
     }
 
     $(function() {
