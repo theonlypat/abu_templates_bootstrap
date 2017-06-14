@@ -631,14 +631,6 @@
         return total;
     }
 
-    function tell_me() {
-        var amount_clicked = $(".donation_amount_checked > .donation_amount_radio").val();
-        var amount_checked = $('input:radio[name=amount]:checked').val();
-        var is_amount_checked = $(".donation_amount_checked > .donation_amount_radio").prop("checked");
-        // $(".whats_checked").html(amount_clicked + " " + amount_checked + " " + is_amount_checked);
-        console.log(amount_clicked + " " + amount_checked + " " + is_amount_checked);
-    }
-
     $(function() {
         $('.ak_product_inputs').on('change blur', update_total);
         $('.ak_candidate_inputs').on('change blur', update_total);
@@ -670,6 +662,13 @@
     // });
 
     /* Amount buttons - Custom Pat Mod */
+    function tell_me() {
+        var amount_clicked = $(".donation_amount_checked > .donation_amount_radio").val();
+        var amount_checked = $('input:radio[name=amount]:checked').val();
+        var is_amount_checked = $(".donation_amount_checked > .donation_amount_radio").prop("checked");
+        // $(".whats_checked").html(amount_clicked + " " + amount_checked + " " + is_amount_checked);
+        console.log(amount_clicked + " " + amount_checked + " " + is_amount_checked);
+    }
     function highlight_selected_amount_button() {
         $('.donation_amount_checked').removeClass('donation_amount_checked');
         $(this).closest('.donation_amount').addClass('donation_amount_checked');
