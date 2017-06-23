@@ -57,7 +57,7 @@
             <div id="what_to_say"></div>
             <script type="text/ak-template" for="what_to_say">
 
-                [% if (!incomplete) { %]
+                {% if (!incomplete) %}
                     <h3>
                         <label class="ak-step-label">
                             <div class="ak-step-number">1</div>
@@ -67,8 +67,7 @@
                     </h3>
 
                 <div class="ak-field-box ak-field-box-borderless">{% include_tmpl form.script_text %}</div>
-                [% }
-                %]
+                {% endif %}
 
                 <style>
                 [% if (incomplete) { %]
