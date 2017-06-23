@@ -1,8 +1,8 @@
 {% extends "./wrapper.html" %}{% load actionkit_tags %}
 {% block content %}
 
-<div class="ak-grid-row">
-    <div class="ak-grid-col ak-grid-col-12-of-12">
+<div class="row">
+    <div class="col-md-12">
         <h2>{{ page.title }}</h2>
     </div>
 </div>
@@ -10,9 +10,9 @@
 <form class="ak-form ak-styled-fields" name="act" method="POST" action="/act/" accept-charset="utf-8">
   <input type="hidden" name="page" value="{{ page.name }}">
 
-  <div class="ak-grid-row">
+  <div class="row">
     <div>
-        <div class="ak-grid-col ak-grid-col-8-of-12">
+        <div class="col-md-8">
 
             <div id="call-story" class="ak-text-expander">
                 {% autoescape off %}
@@ -22,7 +22,7 @@
             <a href="#" class="ak-read-more ak-mobile">Read more</a>
 
         </div>
-        <div class="ak-grid-col ak-grid-col-4-of-12">
+        <div class="col-md-4">
 
             {% if page.custom_fields.featured_image %}
                 <img class="ak-featured-img" src="{{page.custom_fields.featured_image}}">
@@ -52,7 +52,7 @@
     </div>
 
     <div class="ak-steps-area">
-        <div class="ak-grid-col ak-grid-col-4-of-12">
+        <div class="col-md-4">
 
             <div id="what_to_say"></div>
             <script type="text/ak-template" for="what_to_say">
@@ -79,7 +79,7 @@
 
             </script>
         </div>
-        <div class="ak-grid-col ak-grid-col-4-of-12">
+        <div class="col-md-4">
 
             <div id="who_called"></div>
             <script type="text/ak-template" for="who_called">
@@ -99,7 +99,7 @@
             <div id="target_checkboxes" class="ak-margin-bottom-1"></div>
                     
         </div>
-        <div class="ak-grid-col ak-grid-col-4-of-12">
+        <div class="col-md-4">
 
             <div id="ak-survey_question"></div>
             {% if form.survey_question_text %}
@@ -126,7 +126,7 @@
         </div>
     </div>
 
-    <div class="ak-grid-col ak-grid-col-4-of-12 ak-pull-right">
+    <div class="col-md-4 ak-pull-right">
         <button type="submit" class="ak-submit-button">Submit</button>
     </div>
 
