@@ -7,12 +7,12 @@
     </div>
 </div>
 
-<form class="ak-form ak-styled-fields" name="act" method="POST" action="/act/" accept-charset="utf-8">
+<form class="ak-form" name="act" method="POST" action="/act/" accept-charset="utf-8">
   <input type="hidden" name="page" value="{{ page.name }}">
 
-  <div class="row">
-    <div>
-        <div class="col-md-8">
+  <div>
+    <div class="row">
+        <div class="col-md-6">
 
             <div id="call-story" class="ak-text-expander">
                 {% autoescape off %}
@@ -30,6 +30,12 @@
 
             {% include "./progress_meter.html" %}
 
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
             <div id="call-form" class="ak-styled-fields {{templateset.custom_fields.field_labels_class|default:"ak-labels-overlaid"}} {{templateset.custom_fields.field_errors_class|default:"ak-errs-below"}}">
 
                 <div id="ak-need-contact-info"></div>
@@ -47,11 +53,9 @@
 
             </div>
         </div>
-
-
     </div>
 
-    <div class="ak-steps-area">
+    <div class="row ak-steps-area">
         <div class="col-md-4">
 
             <div id="what_to_say"></div>
@@ -126,7 +130,7 @@
         </div>
     </div>
 
-    <div class="col-md-4 ak-pull-right">
+    <div class="col-md-4 pull-right">
         <button type="submit" class="ak-submit-button">Submit</button>
     </div>
 
