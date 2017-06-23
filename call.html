@@ -57,7 +57,7 @@
             <div id="what_to_say"></div>
             <script type="text/ak-template" for="what_to_say">
 
-                [% if (!incomplete) %]
+                [% if (incomplete) %]
                     <h3>
                         <label class="ak-step-label">
                             <div class="ak-step-number">1</div>
@@ -70,7 +70,7 @@
                 [% } %]
 
                 <style>
-                [% if (incomplete) { %]
+                [% if (ncomplete) { %]
                     #what_to_say { display: none; }
                 [% } else { %]
                     .ak-steps-area { clear: both; }
