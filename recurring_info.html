@@ -74,6 +74,7 @@
             <label for="card_num_{{ profile.id }}">
                 Credit Card Number
             </label>
+            {% comment %}If actually using hosted fields, these shouldn't be here...{% endcomment %}
             <input id="card_num_{{ profile.id }}" type="text" name="card_num" disabled=true>
             <div class="ak-card_num-hosted"></div>
         </div>
