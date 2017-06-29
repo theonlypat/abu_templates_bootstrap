@@ -193,6 +193,7 @@
 </form>
 {% if pp.use_vzero %}
 <script>
+// pulled from the recurring_update template. Confusing, I know.
 initVZeroForForm('#change_profile_{{ profile.id }}', '{{ pp.client_token }}');
 </script>
 {% endif %}
