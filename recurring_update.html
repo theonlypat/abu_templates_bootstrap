@@ -75,6 +75,7 @@
 <script src="https://js.braintreegateway.com/web/3.5.0/js/hosted-fields.min.js"></script>
 <script src="https://js.braintreegateway.com/web/3.5.0/js/data-collector.min.js"></script>
 <script src="/resources/ak_braintree_vzero.js"></script>
+<!-- <script src="/resources/ak_braintree_vzero_ptmod.js"></script> -->
 <script>
 function initVZeroForForm(form_id, clientToken) {
     var form = document.querySelector(form_id),
@@ -121,7 +122,9 @@ function initVZeroForForm(form_id, clientToken) {
         document.querySelector(field.selector).classList.add('hosted-field');
     });
 
+    // Takes form, options, and clientToken and passes them to custom initClient function for error, tokenization, and submission.
     actionkit.donations.initClient(clientToken, options);
+    }
 }
 </script>
 

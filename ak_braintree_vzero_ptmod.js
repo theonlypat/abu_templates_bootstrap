@@ -1,9 +1,12 @@
+// PT: I'm using my own mod of this script to fine tune language and error handling. 6/29/2017
+
 /*global window, braintree*/
 var actionkit = window.actionkit || {};
 actionkit.donations = actionkit.donations || {};
 
 (function (donations) {
 
+    // Among other things, this will add the nonce.
     donations.addHiddenInput = function(form, name, value) {
         var input = document.createElement('input');
         input.type = 'hidden';
@@ -13,6 +16,7 @@ actionkit.donations = actionkit.donations || {};
         return input;
     };
 
+    // This is main error handler. With a few expections, this should mainly handle tokenization errors resulting from invalid fields.
     donations.handleError = function(error) {
         window.alert(error.message);
         if (window.console) {
@@ -20,6 +24,7 @@ actionkit.donations = actionkit.donations || {};
         }
     };
 
+    // This initializes the data collector. Shouldn't need to change this. I'm also not sure this is necessary for us since we only use BT.
     donations.initDataCollector = function(clientInstance, options) {
         if (!braintree.dataCollector) {
             console && console.log("Data collector not found.");
@@ -41,11 +46,14 @@ actionkit.donations = actionkit.donations || {};
         });
     };
 
+    // This will tokenize and submit. Must have.
     donations.tokenizeOnSubmit = function(hostedFieldsInstance, options) {
         options.form.addEventListener('submit', function (event) {
             event.preventDefault();
             hostedFieldsInstance.tokenize(function (tokenizeErr, payload) {
+                // A tokenization error
                 if (tokenizeErr) {
+                    // Allows you to submit an empty form
                     if (options.submitOnEmpty && options.submitOnEmpty() &&
                             tokenizeErr.code == 'HOSTED_FIELDS_FIELDS_EMPTY') {
                         options.form.submit();
@@ -60,25 +68,12 @@ actionkit.donations = actionkit.donations || {};
         }, false);
     };
     
+    // Set up the hosted fields. You should almost never see a hosted field error (only if you fucked up the selector queries).
     donations.initHostedFields = function(clientInstance, options) {
         braintree.hostedFields.create({
             client: clientInstance,
             fields: options.fields,
-            styles: {
-              'input': {
-                'font-size': '16px',
-                'font-family': 'courier, monospace',
-                'font-weight': 'lighter',
-                'color': '#ccc'
-              },
-              ':focus': {
-                'color': 'black',
-                'border-bottom': '2px solid orange'
-              },
-              '.valid': {
-                'color': '#8bdda8'
-              }
-            }
+            styles: options.styles
         }, function(hostedFieldsErr, hostedFieldsInstance) {
             if (hostedFieldsErr) {
                 donations.handleError(hostedFieldsErr);
@@ -90,6 +85,7 @@ actionkit.donations = actionkit.donations || {};
         });
     };
 
+    // Set up the client and trigger everything else, nbd
     donations.initClient = function(clientToken, options) {
         if (! options.form) {
             donations.handleError({message: 'Configuration error: need form.'});
@@ -107,4 +103,3 @@ actionkit.donations = actionkit.donations || {};
     };
 
 }(actionkit.donations));
-0
