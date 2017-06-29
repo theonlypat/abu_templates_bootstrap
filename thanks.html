@@ -10,7 +10,7 @@
 {% if actionkit_user %}
     {% if recurring_update or recurring_cancel %}
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6 col-md-offset-3">
                 <p>
                     {% filter ak_text:"logged_in_as" %}You are logged in as{% endfilter %} {{ actionkit_user.name }}.
                     <a href="/logout">{% filter ak_text:"logout" %}Click to log out.{% endfilter %}</a>
@@ -22,7 +22,7 @@
 
 {% if page.SUPPRESS_SHARING %}
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6 col-md-offset-3">
             <h2>
                 <img src="/media/modern/stance-supportive.svg" width="34" class="ak-checkmark-icon" alt="&#10003;">
                 {% filter ak_text:"noshare_thanks_banner" %}
