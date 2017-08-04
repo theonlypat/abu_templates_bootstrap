@@ -343,9 +343,9 @@
                 <br><br>
                 {% if page.custom_fields.page_organization_name == 'ABU Education Fund' %}
                 <span><a href="//abuedfund.org/privacy-policy/" style="color:{% if page.custom_fields.page_link_color %}{{ page.custom_fields.page_link_color }}!important{% endif %}">{{ 'Privacy Policy'|ak_text:'privacy' }}</a></span> | 
-                <span><a href="mailto:info@abuedfund.org">{{ 'Contact'|ak_text:'contact' }}</a></span>
+                <span><a href="mailto:info@abuedfund.org" style="color:{% if page.custom_fields.page_link_color %}{{ page.custom_fields.page_link_color }}!important{% endif %}">{{ 'Contact'|ak_text:'contact' }}</a></span>
                 {% else %}
-                <span><a href="//betterutah.org/privacy-policy/" style="color:{% if page.custom_fields.page_link_color %}{{ page.custom_fields.page_link_color }}!important{% endif %}">{{ 'Privacy Policy'|ak_text:'privacy' }}</a></span> | 
+                <span><a href="//betterutah.org/privacy-policy/">{{ 'Privacy Policy'|ak_text:'privacy' }}</a></span> | 
                 <span><a href="mailto:info@betterutah.org">{{ 'Contact'|ak_text:'contact' }}</a></span>
                 {% endif %}
             </div>
