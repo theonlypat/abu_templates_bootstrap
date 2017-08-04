@@ -261,6 +261,9 @@
         label.ak-donate-step:hover {
             color: {{ page.custom_fields.page_link_color }}!important;
         }
+        .ak-donate-menu input:checked + div.ak-step-number:hover, label.ak-donate-step:hover div.ak-step-number {
+            background: {{ page.custom_fields.page_link_color }}!important;
+        }
         .donation_amount_checked {
             background-color: {{ page.custom_fields.page_link_color }}!important;
         }
