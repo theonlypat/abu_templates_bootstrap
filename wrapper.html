@@ -267,9 +267,9 @@
         <div class="container-fluid">
             <div class="navbar-header">
                 {% if page.custom_feilds.page_organization_name == 'ABU Education Fund' %}
-                <h1 class="navbar-text" style="font-size:24px;"><a href="http://betterutah.org" target="_blank" style="color:{% if page.custom_fields.page_link_color %}{{ page.custom_fields.page_link_color }}!important{% endif %}">Alliance for a Better Utah</a>
+                <h1 class="navbar-text" style="font-size:24px;"><a href="http://betterutah.org" target="_blank">Alliance for a Better Utah</a>
                 {% else %}
-                <h1 class="navbar-text" style="font-size:24px;"><a href="http://abuedfund.org" target="_blank">ABU Education Fund</a>
+                <h1 class="navbar-text" style="font-size:24px;"><a href="http://abuedfund.org" target="_blank" style="color:{% if page.custom_fields.page_link_color %}{{ page.custom_fields.page_link_color }}!important{% endif %}">ABU Education Fund</a>
                 {% endif %}
                 {% if page.custom_fields.sponsors_ally_allies %}
                 &amp; {% if page.custom_fields.sponsors_website_link %}
