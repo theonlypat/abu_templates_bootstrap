@@ -304,8 +304,13 @@
                     {% endif %}
                 {% endif %}
                 <br><br>
+                {% if page.custom_fields.page_organization_name == 'ABU Education Fund' %}
+                <span><a href="//abuedfund.org/privacy-policy/">{{ 'Privacy Policy'|ak_text:'privacy' }}</a></span> | 
+                <span><a href="mailto:info@abuedfund.org">{{ 'Contact'|ak_text:'contact' }}</a></span>
+                {% else %}
                 <span><a href="//betterutah.org/privacy-policy/">{{ 'Privacy Policy'|ak_text:'privacy' }}</a></span> | 
                 <span><a href="mailto:info@betterutah.org">{{ 'Contact'|ak_text:'contact' }}</a></span>
+                {% endif %}
             </div>
         </footer>
 
