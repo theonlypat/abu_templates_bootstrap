@@ -284,7 +284,12 @@
 
         <footer class="" style="text-align:center">
             <div class="">
-                <a href="http://betterutah.org" target="_blank"><img src="https://s3.amazonaws.com/s3.betterutah.org/images/ABU_LOGO_B_HORZ.png" height="40px" style=""></a> 
+                {% if page.custom_fields.page_organization_name == 'ABU Education Fund' %}
+                    <a href="http://abuedfund.org" target="blank"><img src="https://s3.amazonaws.com/s3.betterutah.org/images/abuedfundlogo-newcolors.png" height="40px" style="" /></a>
+                {% else %}
+                <a href="http://betterutah.org" target="_blank"><img src="https://s3.amazonaws.com/s3.betterutah.org/images/ABU_LOGO_B_HORZ.png" height="40px" style=""></a>
+                {% endif %}
+
                 {% if page.custom_fields.sponsors_image_url %}
                     {% if page.custom_fields.sponsors_website_link %}
                     <a href="{{ page.custom_fields.sponsors_website_link }}" target="_blank">
