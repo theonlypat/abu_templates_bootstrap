@@ -257,6 +257,18 @@
             color: {{ templateset.custom_fields.color_error }};
         }
     {% endif %}
+    {% if page.custom_fields.page_link_color %}
+        .donation_amount_checked {
+            background-color: {{ page.custom_fields.page_link_color }}!important;
+        }
+        .donation_amount_checked:hover {
+            /*background-color:;*/
+        }
+        .control input:checked ~ .control__indicator {
+            background: {{ page.custom_fields.page_link_color }}!important;
+        }
+
+    {% endif %}
     </style>
     {% block script_additions %}{% endblock %}
 </head>
